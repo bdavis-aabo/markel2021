@@ -1,6 +1,34 @@
 # ignore everything in the root except the "wp-content" directory.
 !wp-content/
 
+wp-admin/*
+wp-includes/*
+wp-content/backup/*
+wp-content/cache/*
+wp-content/upgrade/*
+wp-content/uploads/*
+wp-content/plugins/*
+config.codekit3
+sitemap.*
+index.php
+license.txt
+readme.html
+wp-activate.php
+wp-blog-header.php
+wp-comments-post.php
+wp-config-sample.php
+wp-cron.php
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+xmlrpc.php
+wp-config.php
+bourbon/
+
 # ignore everything in the "wp-content" directory, except:
 # "mu-plugins", "plugins", "themes" directory
 wp-content/*
@@ -13,6 +41,8 @@ wp-content/plugins/hello.php
 
 # ignore specific themes
 wp-content/themes/twenty*/
+wp-content/themes/markel2021/assets/_inc/ga.php
+
 
 # ignore node dependency directories
 node_modules/
@@ -21,3 +51,8 @@ node_modules/
 *.log
 *.sql
 *.sqlite
+
+# Hidden system files
+*.DS_Store
+*[Tt]humbs.db
+*.Trashes
