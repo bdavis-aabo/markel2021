@@ -32,7 +32,8 @@ bourbon/
 # ignore everything in the "wp-content" directory, except:
 # "mu-plugins", "plugins", "themes" directory
 #wp-content/*
-#!wp-content/themes/
+!wp-content/themes/
+!wp-content/themes/markelhomes2021/index.php
 
 # ignore these plugins
 wp-content/plugins/hello.php
