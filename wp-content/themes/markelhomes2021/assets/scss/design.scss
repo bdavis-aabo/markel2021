@@ -1,0 +1,50 @@
+@import 'bourbon/bourbon';
+@import 'addon-mixins';
+
+// FONTS
+@include font-face('helvetica', '../fonts/helvetica/Helvetica');
+@include font-face('helvetica-light', '../fonts/helvetica_std-light/HelveticaLTStd-Light');
+@include font-face('helvetica-oblique', '../fonts/helvetica_std-oblique/HelveticaLTStd-Obl');
+@include font-face('helvetica-bold', '../fonts/helvetica_std-bold/HelveticaLTStd-Bold');
+@include font-face('helvetica-cond_bold', '../fonts/helvetica_std-boldCond/HelveticaLTStd-BoldCond');
+
+$base-font-size: 15px;
+$line-height:    28px;
+$heading-scale:  6;
+@include headings($base-font-size, $heading-scale * 1.15);
+
+// COLORS
+$black:  #000;
+$white:  #fff;
+$ltgray:  #6f7170;
+$dkgray:  #535659;
+$blue:    #003a49;
+$ltblue:  #52c5d7;
+$red:     #900027;
+$gold:    #daa900;
+$green:   #99bc56;
+
+// BACKGROUNDS
+.blue-bg { background: $blue; color: $white; }
+.red-bg  { background: $red; color: $white; }
+
+// BUTTONS
+.btn { transition: all 666ms ease; border-radius: 50%; text-transform: uppercase; font-family: 'helvetica', sans-serif; padding: 8px 35px; }
+
+
+// TEXT COLORS
+
+
+// BASE STYLES
+body { font-size: $base-font-size; line-height: $line-height; font-family: 'helvetica'; color: $dkgray; }
+strong { font-weight: normal; font-family: 'helvetica-bold'; }
+p { margin: 0 0 15px; }
+a { transition: all 666ms ease-in-out; text-decoration: none;
+  &:hover { text-decoration: none; }
+}
+
+// IMAGE ALIGNMENTS
+img.alignleft, .alignleft     { display: block; float: left; margin: 0 12px 12px 0; }
+img.alignright, .alignright   { display: block; float: right; margin: 0 0 12px 12px; }
+img.aligncenter, .aligncenter { display: block; float: none; margin: 0 auto 12px; }
+img.alignnone, .alignnone     { display: block; float: none; margin: 12px 0; }

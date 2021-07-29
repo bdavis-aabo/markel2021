@@ -175,6 +175,19 @@ if(function_exists('register_sidebar')){
 	));
 }
 
+if(function_exists('register_sidebar'))
+{
+  register_sidebar(array(
+		'name'            => __('Contact Form Address', 'contact-address'),
+		'description'     => __('Displays address information on contact page & footer.', 'contact-address'),
+		'id'              => 'contact-address',
+		'before_widget'   => '',
+		'after_widget'    => '',
+		'before_title'    => '<h3>',
+		'after_title'     => '</h3>'
+	));
+}
+
 function custom_more_link(){
   return '<a class="more-link btn btn-red" href="'.get_permalink().'">Read More <i class="fa fa-chevron-right"></i></a>';
 }
@@ -210,7 +223,6 @@ function pagination($pages = '', $range = 4)
                 echo ($paged == $i)? "<span class=\"current\">".$i."</span>":"<a href='".get_pagenum_link($i)."' class=\"inactive\">".$i."</a>";
             }
         }
-
         if ($paged < $pages && $showitems < $pages) echo "<a href=\"".get_pagenum_link($paged + 1)."\">Next &rsaquo;</a>";
         if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($pages)."'>Last &raquo;</a>";
         echo "</div>\n";
