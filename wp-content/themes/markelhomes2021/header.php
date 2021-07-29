@@ -5,26 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>
-  <?php
-  	if(function_exists('is_tag') && is_tag()) {
-      	echo 'Tag Archive for &quot;' . $tag . '&quot; - ';
-  	} elseif(is_archive()) {
-      	wp_title(''); echo ' Archive - ';
-  	} elseif(is_search()) {
-      	echo 'Search for &quot;' . wp_specialchars($s) . '&quot; - ';
-  	} elseif(!(is_404()) && (is_single()) || (is_page()) && !(is_front_page())) {
-      	wp_title('');
-  	} elseif(is_404()) {
-      	echo 'Page Not Found - ';
-  	} elseif(is_front_page()){
-      	bloginfo('name');
-  	} elseif(is_home()){
-      	echo 'Latest News - '; bloginfo('name');
-  	}
-  ?>
-  </title>
-
   <?php //seo plugin grabs page title ?>
 
   <link rel="profile" href="http://gmpg.org/xfn/11">
@@ -40,6 +20,41 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
+  <?php
+    if('' != locate_template('/assets/_inc/ga.php')):
+      include_once('assets/_inc/ga.php');
+    endif;
+  ?>
+
   <?php wp_head() ?>
 </head>
 <body <?php body_class(); ?>>
+
+  <header class="header">
+    <button class="navbar-toggler hamburger hamburger--spin" type="button" data-toggle="display" data-target="#mainNavbar">
+      <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+      </div>
+    </button>
+    <nav class="navbar navbar-expand-lg">
+      <a href="<?php bloginfo('url') ?>" title="<?php bloginfo('name') ?>" class="navbar-brand">
+        <img src="<?php bloginfo('template_directory') ?>/assets/images/markel-logo.svg" alt="<?php bloginfo('name') ?>" class="header-logo img-fluid" />
+      </a>
+
+      <div class="navbar-collapse justify-content-end" id="mainNavbar">
+        <?php wp_nav_menu(array(
+          'menu'            =>  'main-menu',
+          'depth'           =>  2,
+          'container'       =>  '',
+          'container_class' =>  '',
+          'container_id'    =>  'main-navbar',
+          'menu_class'      =>  'navbar-nav',
+        ));
+        ?>
+      </div>
+    </nav>
+
+    <div class="nav-subnav">
+      <?php wp_nav_menu(array('menu'=>'sub-menu')) ?>
+    </div>
+  </header>
