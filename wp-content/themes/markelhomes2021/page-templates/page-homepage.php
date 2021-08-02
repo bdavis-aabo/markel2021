@@ -23,22 +23,9 @@
     </div>
   </section>
 
-  <?php if(have_rows('homepage_tiles')): get_template_part('home/home-tiles'); endif; ?>
+  <?php if(have_rows('homepage_tiles')): get_template_part('home/home-tiles'); endif; // end tiles ?>
 
-  <?php if(have_rows('homepage_history')): ?>
-  <section class="home-section home-content-section">
-    <?php while(have_rows('homepage_history')): the_row(); $_historyImage = get_sub_field('history_image'); ?>
-    <div class="home-content-container">
-      <div class="history-left"><?php echo get_sub_field('history_content') ?></div>
-      <div class="history-right">
-        <figure class="history-image">
-          <img src="<?php echo $_historyImage['url'] ?>" alt="<?php $_historyImage['alt'] ?>" class="img-fluid" />
-        </figure>
-      </div>
-    </div>
-    <?php endwhile; ?>
-  </section>
-  <?php endif; // end history ?>
+  <?php if(have_rows('homepage_history')): get_template_part('home/home-history'); endif; // end history ?>
 
   <?php if(get_field('homepage_quote') != ''): ?>
   <section class="home-section home-quote-section">
