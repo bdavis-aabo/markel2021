@@ -1,0 +1,12 @@
+// MAP STYLES
+.page-section {
+  &.community-section { align-items: stretch;
+    .map-container,
+    .community-container { flex-basis: 50%; }
+
+    .community-container { min-height: 800px; }
+  }
+}
+
+
+#communityMap { }
