@@ -161,6 +161,7 @@ function location_taxonomies(){
 		);
 	register_taxonomy('community', array('models','qmihomes'), $_args);
 }
+add_action('init', 'location_taxonomies', 0);
 
 // Widgets
 if(function_exists('register_sidebar')){

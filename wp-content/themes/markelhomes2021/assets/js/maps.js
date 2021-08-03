@@ -46,3 +46,40 @@ map.on('load', function(){
     'source-layer': 'Markel_Homes'
   });
 });
+
+map.on('click', function(e){
+  var features = map.queryRenderedFeatures(e.point, {
+    layers: ['communities']
+  });
+  if(!features.length){ return; }
+
+  var feature = features[0];
+
+  // Define Data fields
+  var title =      feature.properties.title;
+  var address =    feature.properties.address;
+  var phone =      feature.properties.phone;
+  var product =    feature.properties.product;
+  var footage =    feature.properties.footage;
+  var bed =        feature.properties.bed;
+  var bath =       feature.properties.bath;
+  var price =      feature.properties.pricing;
+  var image =      feature.properties.image;
+
+  var commPopupContent = '<div class="community-popup popup">';
+  if(image){
+    commPopupContent += '<picture class="popup-image"><img src="' + image + '" class="img-fluid" alt="' + title + '" /></picture>';
+  }
+  commPopupContent += '<div class="community-details">' +
+    '<h3 class="community-name">' + title + '</h2>' +
+    '<p class="community-address">' + address + '</p>' +
+    '<p class="community-info">' + product + '<br/>' + footage + ' Sq. Ft. <br />' +
+      bed + ' Beds | ' + bath + ' Baths<br/ >' +
+      'Priced From ' + price + '</p>' +
+    '</div>';
+
+  var commPopup = new mapboxgl.Popup({ offset: [0,25]})
+    .setLngLat(feature.geometry.coordinates)
+    .setHTML(commPopupContent)
+    .addTo(map);
+});
