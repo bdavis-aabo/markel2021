@@ -16,7 +16,7 @@
 ?>
 
   <?php if($_designs->have_posts()): ?>
-  <section class="page-section community-design" id="design">
+  <section class="page-section community-design" id="designs">
     <div class="design-header">
       <span class="gold-text section-title">overview</span>
       <h2>Available at <?php echo $_currentPage->post_title; ?></h2>
@@ -26,7 +26,13 @@
       <?php while($_designs->have_posts()): $_designs->the_post(); ?>
       <article class="design" id="<?php $post->post_name ?>">
         <figure class="design-image">
-          <?php echo get_the_post_thumbnail($post->ID, 'full', array('class' => 'img-fluid')); ?>
+        <?php while(have_rows('homeplan_heroimage')): the_row();
+          $_lgImage  = get_sub_field('large_image');
+          $_mobImage = get_sub_field('mobile_image');
+        ?>
+          <source media="(max-width: 520px)" srcset="<?php echo $_mobImage['url'] ?>">
+          <img src="<?php echo $_lgImage['url'] ?>" alt="<?php echo $_lgImage['alt'] ?>" class="design-img img-fluid" />
+        <?php endwhile; ?>
         </figure>
         <div class="design-info">
           <span class="red-txt">Price from $<?php echo get_field('homeplan_price') ?>
