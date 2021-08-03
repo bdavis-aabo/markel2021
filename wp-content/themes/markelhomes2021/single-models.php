@@ -1,15 +1,28 @@
 <?php get_header(); ?>
 
-<?php while(have_posts()): the_post(); ?>
+<?php while(have_posts()): the_post();
+  $_postTerms = wp_get_post_terms($post->ID, 'community');
+  $_location = $_postTerms[0];
+
+
+?>
+  <?php if(have_rows('homeplan_heroimage')): ?>
   <section class="page-section floorplan-heroimage">
     <figure>
-      <?php echo get_the_post_thumbnail($post->ID, 'full', array('class' => 'img-fluid')); ?>
+    <?php while(have_rows('homeplan_heroimage')): the_row();
+      $_lgImage  = get_sub_field('large_image');
+      $_mobImage = get_sub_field('mobile_image');
+    ?>
+      <source media="(max-width: 520px)" srcset="<?php echo $_mobImage['url'] ?>">
+      <img src="<?php echo $_lgImage['url'] ?>" alt="<?php echo $_lgImage['alt'] ?>" class="heroimage-img img-fluid" />
+    <?php endwhile; ?>
     </figure>
   </section>
+  <?php endif; ?>
 
   <section class="page-section floorplan-description">
     <div class="back-btn-container">
-      back button to community
+      <a href="/communities/<?php echo $_location->slug ?>" title="Back to <?php $_location->name; ?>">/ Back</a>
     </div>
     <div class="floorplan-contents">
       <h1 class="floorplan-title"><?php the_title(); ?></h2>
