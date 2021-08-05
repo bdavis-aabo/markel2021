@@ -31,17 +31,18 @@
 <body <?php body_class(); ?>>
 
   <header class="header">
-    <button class="navbar-toggler hamburger hamburger--spin" type="button" data-toggle="display" data-target="#mainNavbar">
+    <button class="navbar-toggler hamburger hamburger--spin" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar"
+      aria-expanded="false" aria-label="toggle navigation">
       <div class="hamburger-box">
         <div class="hamburger-inner"></div>
       </div>
     </button>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-xl navbar-light bg-light">
       <a href="<?php bloginfo('url') ?>" title="<?php bloginfo('name') ?>" class="navbar-brand">
         <img src="<?php bloginfo('template_directory') ?>/assets/images/markel-logo.svg" alt="<?php bloginfo('name') ?>" class="header-logo img-fluid" />
       </a>
 
-      <div class="navbar-collapse justify-content-end" id="mainNavbar">
+      <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
         <?php wp_nav_menu(array(
           'menu'            =>  'main-menu',
           'depth'           =>  2,
