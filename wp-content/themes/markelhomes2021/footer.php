@@ -8,7 +8,7 @@
         <?php if(is_active_sidebar('contact-address')): dynamic_sidebar('contact-address'); endif; ?>
       </div>
       <div class="footer-right">
-        <span class="footer-title">Contact Us</span>
+        <span class="footer-title">FOLLOW US</span>
         <ul class="social-links">
           <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
           <li><a href=""><i class="fab fa-instagram"></i></a></li>

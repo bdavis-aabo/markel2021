@@ -1,0 +1,114 @@
+// HAMBURGER STYLES
+.hamburger { padding: 5px 0; display: inline-block; cursor: pointer; transition-property: opacity, filter; transition-duration: .15s;
+  transition-timing-function: linear; font: inherit; color: inherit; text-transform: none; background-color: transparent; border: 0; margin: 0; overflow: visible;
+  position: absolute; transform: translateY(-50%);
+  &:focus { box-shadow: none !important; outline: none !important; }
+  &:hover { opacity: .7; }
+  &.is-active {
+    &:hover   { opacity: .7; }
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after { background-color: $blue; }
+  }
+  .hamburger-box { width: 40px; height: 24px; display: inline-block; position: relative; }
+  .hamburger-inner { display: block; top: 50%; margin-top: -2px;
+    &::before,
+    &::after { content: ''; display: block; }
+    &::before { top: -10px; }
+    &::after  { bottom: -10px; }
+  }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after { width: 30px; height: 2px; background-color: $blue; border-radius: 0;
+    position: absolute; transition-property: transform; transition-duration: .15s; transition-timing-function: ease; }
+}
+.hamburger--spin {
+  .hamburger-inner {
+    transition-duration: .22s; transition-timing-function: cubic-bezier(.55,.055,.675,.19);
+    &::before { transition: top .1s .25s ease-in, opacity .1s ease-in; }
+    &::after  { transition: bottom .1s .25s ease-in, transform .22s cubic-bezier(.55,.055,.675,.19); }
+  }
+  &.is-active {
+    .hamburger-inner { transform: rotate(225deg); transition-delay: .12s; transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      &:before { top: 0; opacity: 0; transition: top .1s ease-out, opacity .1s .12s ease-out; }
+      &:after  { bottom: 0; transform: rotate(-90deg); transition: bottom .1s ease-out, transform .22s .12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+    }
+  }
+}
+
+// HEADER STYLES
+.header { width: 100%;
+  .hamburger { z-index: 1; top: 40px; right: 5px; }
+  .navbar {
+    .navbar-brand {
+      .header-logo { width: 250px; }
+    }
+    .navbar-nav { margin-top: 30px; text-transform: uppercase; font-family: 'helvetica-light'; font-size: .95em;
+      .menu-item { padding: 5px 10px;
+        a { color: $dkgray; padding: 7px 15px 2px;
+          &::before { content: '/ '; }
+          &:hover { color: $red; }
+        }
+        &.current-menu-item {
+          a { color: $red; }
+        }
+
+      }
+    }
+  }
+  .nav-subnav {
+    .menu { padding: 0; margin: 0; list-style: none; text-transform: uppercase; font-family: 'helvetica-light'; font-size: .95em;
+      .menu-item { padding: 9px 25px 4px;
+        a { color: $white; padding-bottom: 0; }
+      }
+    }
+  }
+}
+
+
+/*** SMALL DEVICES : Landscape phones, 576px + ***/
+@media (min-width: 576px){
+
+}
+
+/*** IPHONE X : Landscape ***/
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+
+}
+
+/*** MEDIUM DEVICES : Tablets, 768px + ***/
+@media (min-width: 768px){
+
+}
+
+/*** LARGE DEVICES : Desktops, 992px and up ***/
+@media (min-width: 992px){
+  .header {
+      .nav-subnav {
+        .menu { display: flex; flex-wrap: nowrap; justify-content: flex-end; align-items: center;
+          .menu-item { flex-basis: 20%; text-align: center; }
+        }
+      }
+  }
+}
+
+/*** EXTRA LARGE DEVICES : Large Desktops, 1200px + ***/
+@media (min-width: 1200px){
+  .header {
+    .hamburger { display: none; }
+    .navbar { padding-top: 15px; padding-bottom: 15px;
+      .navbar-nav { margin-top: 15px;
+        .menu-item {
+          &.contact-btn {
+            a { border: 1px solid $dkgray; border-radius: 20px; padding: 8px 20px 2px;
+              &::before { content: ''; }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+:::::::::: CUSTOM MEDIA QUERIES IF NEEDED ::::::::::
+*/

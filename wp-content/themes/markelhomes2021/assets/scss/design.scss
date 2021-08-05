@@ -10,7 +10,7 @@
 
 $base-font-size: 15px;
 $line-height:    28px;
-$heading-scale:  6;
+$heading-scale:  5;
 @include headings($base-font-size, $heading-scale * 1.15);
 
 // COLORS
@@ -30,7 +30,14 @@ $ltgreen: #829794;
 .red-bg  { background: $red; color: $white; }
 
 // BUTTONS
-.btn { transition: all 666ms ease; border-radius: 50%; text-transform: uppercase; font-family: 'helvetica', sans-serif; padding: 8px 35px; }
+.btn { transition: all 666ms ease; border-radius: 50%; text-transform: uppercase; font-family: 'helvetica-light', sans-serif; font-size: .95em; padding: 8px 35px;
+  &.outline-btn { border-radius: 20px; padding: 8px 60px 3px; border: 1px solid $dkgray;
+    &.white-btn { border-color: $white; color: $white;
+      &:hover { background: rgba($white, .25); }
+    }
+  }
+
+}
 
 
 // TEXT COLORS

@@ -3,5 +3,146 @@
 @import 'forms';
 @import 'maps';
 
+// HOMEPAGE STYLES
+.home-section { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; padding: 1.5vh 0;
+  &.home-heroimage { padding: 0;
+    .homepage-heroimage { position: relative; top: 0; left: 0;
+      .heroimage-caption  { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-transform: uppercase; color: $white; z-index: 1; width: 100%;
+        text-align: center; margin-bottom: 0; line-height: 1; text-shadow: 0 0 15px rgba($black, .5);
+      }
+    }
+  }
+  &.home-content-section { padding-bottom: 0;
+    &.house-bg { background: $white url('../images/markel_house-outline.jpg') no-repeat right bottom; background-size: 50%; }
+    .home-content-container { flex-basis: 75%; padding: 3vh 0; text-align: center;
+      .page-title { font-size: 2.5em; margin-bottom: 10px; padding: 0 5%; letter-spacing: 1.5px; }
+      .logo-mark  { margin-bottom: 15px; }
+      p { line-height: 1.65em; margin-bottom: 15px;
+        strong { font-weight: normal;
+          em { font-style: normal; color: $gold; }
+        }
+      }
 
-.page-section { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; }
+      .history-left { text-align: center; margin-bottom: 2.5vh; }
+    }
+  }
+  &.home-tiles { padding-top: 0;
+    .tile-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch;
+      .tile { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; color: $white;
+        .tile-contents { text-align: center; flex-basis: 65%;
+          p { font-family: 'helvetica-light'; margin-bottom: 25px; }
+        }
+        &.community-tile { position: relative; overflow: hidden;
+          .tile-overlay { position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: rgba($black,.75); transform: translateY(100%); opacity: 0;
+            display: flex; flex-wrap: wrap; justify-content: center; align-items: center; transition: all 666ms ease-in-out;
+            .tile-overlay-contents { text-align: center;
+              h2 { margin-bottom: 0; }
+              p  { text-transform: uppercase; font-family: 'helvetica-light'; }
+            }
+          }
+          &:hover {
+            .tile-overlay { transform: translateY(0); opacity: 1; }
+          }
+        }
+      }
+    }
+  }
+  &.home-quote-section { background: url('../images/testimonial-image.jpg') no-repeat center top; background-size: cover; margin-bottom: 2.5vh;
+    .carousel {
+      .carousel-inner {
+        .carousel-item { padding: 2vh 7.5%; text-align: center; color: $white;
+          p { margin: 15px 0; font-family: 'helvetica-bold'; }
+          .fas { font-size: 2em; }
+        }
+      }
+    }
+  }
+  &.news-section {
+    .news-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+      .news-title { text-align: center; padding: 0 5%; }
+      .latest-post { flex-basis: 90%; margin-bottom: 25px;
+        .article-title { display: block; text-transform: uppercase; font-family: 'helvetica-light'; padding-right: 5%; line-height: 1.35em; margin-bottom: 15px; }
+        .gold-btn { text-transform: uppercase; color: $gold; }
+      }
+    }
+  }
+}
+
+// PAGE TEMPLATE STYLES
+.page-section { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  // COMMUNITY PARENT PAGE
+  &.community-section {
+    .map-container { display: none; }
+    .community-container { flex-basis: 100%;
+      .community-box { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+        .community-image { margin-bottom: 15px; }
+        .community-details { padding: 20px 0;
+          .community-name { margin-bottom: 0; }
+          .community-location { text-transform: uppercase; }
+          .community-location,
+          .community-info { font-family: 'helvetica-light'; line-height: 1.65em; }
+        }
+      }
+    }
+  }
+  &.community-link-section { display: none; }
+}
+
+
+
+
+// FOOTER STYLES
+.footer { padding-top: 3vh; padding-bottom: 3vh;
+  .footer-content-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start;
+    div { flex-basis: 100%; text-align: center; }
+    .logo-container {
+      .house-logo { width: 90px; }
+    }
+    .footer-left { border-right: 1px solid $white; }
+    .footer-left,
+    .footer-right { margin-top: 1.5vh; flex-basis: 50%;
+      .footer-title { display: block; text-transform: uppercase; font-family: 'helvetica-light'; font-size: 1.1em; padding-bottom: 12px; }
+      .textwidget {
+        p { font-size: .95em; line-height: 1.35em; }
+      }
+    }
+    .footer-right {
+      .social-links { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; justify-content: center;
+        li { padding: 0;
+          a { color: $white; padding: 0 12px; font-size: 2em; }
+        }
+      }
+    }
+    .footer-copyright { margin-top: 10px; text-transform: uppercase; }
+  }
+}
+
+/*** SMALL DEVICES : Landscape phones, 576px + ***/
+@media (min-width: 576px){
+
+}
+
+/*** IPHONE X : Landscape ***/
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+
+}
+
+/*** MEDIUM DEVICES : Tablets, 768px + ***/
+@media (min-width: 768px){
+
+}
+
+/*** LARGE DEVICES : Desktops, 992px and up ***/
+@media (min-width: 992px){
+
+}
+
+/*** EXTRA LARGE DEVICES : Large Desktops, 1200px + ***/
+@media (min-width: 1200px){
+
+}
+
+/*
+:::::::::: CUSTOM MEDIA QUERIES IF NEEDED ::::::::::
+*/

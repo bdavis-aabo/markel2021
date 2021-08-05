@@ -6,6 +6,7 @@
       margin-bottom: ($x + $y * (6 - $i)) / 2;
       font-family: 'helvetica-cond_bold', sans-serif;
       line-height: ($x + $y * (6 - $i)) * 1.1;
+      text-transform: uppercase;
     }
   }
 }

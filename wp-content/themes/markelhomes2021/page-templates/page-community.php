@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<?php while(have_posts()): the_post(); $_lgImage = get_field('community_heroimage'); $_mogImage = get_field('community_heroimage_mobile'); ?>
+<?php while(have_posts()): the_post(); $_lgImage = get_field('community_heroimage'); $_mobImage = get_field('community_heroimage_mobile'); ?>
   <section class="page-section page-heroimage">
     <picture class="homepage-heroimage">
       <source media="(max-width: 520px)" srcset="<?php echo $_mobImage['url'] ?>">
