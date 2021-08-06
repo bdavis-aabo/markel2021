@@ -70,13 +70,17 @@
 
 // PAGE TEMPLATE STYLES
 .page-section { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  .section-title { text-transform: uppercase; font-family: 'helvetica-light'; font-size: .95em; padding-bottom: 10px;
+    &::before { content: '/ '; }
+  }
+
   // COMMUNITY PARENT PAGE
   &.community-section {
     .map-container { display: none; }
     .community-container { flex-basis: 100%;
       .community-box { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
         .community-image { margin-bottom: 15px; }
-        .community-details { padding: 20px 0;
+        .community-details { padding: 20px 0; flex-basis: 60%;
           .community-name { margin-bottom: 0; }
           .community-location { text-transform: uppercase; }
           .community-location,
@@ -86,6 +90,76 @@
     }
   }
   &.community-link-section { display: none; }
+
+  // COMMUNITY DETAIL PAGE
+  &.page-heroimage-section {
+    .page-heroimage { position: relative; top: 0; left: 0;
+      .heroimage-caption  { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-transform: uppercase; color: $white; z-index: 1; width: 100%;
+        text-align: center; margin-bottom: 0; line-height: 1.2em; text-shadow: 0 0 15px rgba($black, .5); padding: 0 10%; letter-spacing: 1.5px;
+        .divider { display: none; }
+      }
+    }
+  }
+  &.community-jumplinks {
+    .jumplink-container { flex-basis: 95%;
+      .jumplinks { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; margin: 15px 0 0; padding: 0; list-style: none;
+        li { text-transform: uppercase; flex-grow: 1; flex-basis: 50%; padding: 5px 0; font-family: 'helvetica-light'; font-size: .95em;
+          a { color: $dkgray;
+            &:hover { color: $gold; }
+            &::before { content: '/ '; }
+          }
+        }
+      }
+    }
+  }
+  &.community-overview { padding: 2.5vh 0;
+    .comm-overview-container { flex-basis: 80%; text-align: center;
+      .community-logo { width: 45%; margin: 0 auto 20px; }
+      h2 { margin-top: 15px; }
+    }
+  }
+  &.community-design { padding: 2.5vh 0;
+    .design-header { text-align: center;
+      h2 { margin-top: 15px; }
+    }
+    .design-container {
+      .design { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+        .design-image { margin-bottom: 15px; }
+        .design-info { padding: 20px 0; flex-basis: 60%;
+          .red-txt { text-transform: uppercase; }
+          .design-title { margin: 15px 0; font-size: 28px; }
+          p { font-family: 'helvetica-light'; color: $dkgray; padding-right: 10%; }
+        }
+      }
+    }
+  }
+  &.community-interactive { margin-bottom: 2.5vh; padding-bottom: 1.5vh;
+    .map-title { padding: 1.5vh 0; text-align: center;
+      h2 { margin: 8px 0 15px; letter-spacing: 1.5px; }
+    }
+    .map-container { padding: 2.5vh 0; flex-basis: 90%;
+      .interactive-map { margin: 2.5vh 0; }
+    }
+  }
+  &.community-features {
+    .community-features-container { display: flex; flex-wrap: wrap; justify-content: center;
+      .carousel-inner {
+        .carousel-item {
+          .community-feature-content { margin: 5.5vh auto 0; padding-bottom: 2.5vh; width: 80%; text-align: center;
+            ul { text-align: left; }
+          }
+        }
+      }
+      .carousel-indicators { bottom: auto; top: 50%; margin-left: 5%; margin-right: 5%;
+        li { text-indent: 0; width: auto; height: auto; text-transform: uppercase; font-size: .95em; margin-right: 0; border: none; color: $dkgray; opacity: 1;
+          padding: 0 15px;
+          &::before { content: '/ '; }
+          &.active { color: $gold; }
+        }
+      }
+    }
+  }
+  .community-brochure-download { padding: 0 0 5vh; }
 }
 
 
