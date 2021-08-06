@@ -18,7 +18,7 @@
   <?php if($_designs->have_posts()): ?>
   <section class="page-section community-design" id="designs">
     <div class="design-header">
-      <span class="gold-text section-title">overview</span>
+      <span class="gold-text section-title">home designs</span>
       <h2>Available at <?php echo $_currentPage->post_title; ?></h2>
     </div>
 
@@ -35,10 +35,9 @@
         <?php endwhile; ?>
         </figure>
         <div class="design-info">
-          <span class="red-txt">Price from $<?php echo get_field('homeplan_price') ?>
+          <span class="red-txt">Price from $<?php echo get_field('homeplan_price') ?></span>
           <h3 class="design-title"><?php the_title() ?></h3>
-          <p class="gray-txt"><?php echo get_field('homeplan_details') ?></p>
-
+          <?php echo get_field('homeplan_details') ?>
           <a href="<?php the_permalink() ?>" title="<?php the_title() ?>" class="btn outline-btn gold-txt">View Floorplan</a>
         </div>
       </article>

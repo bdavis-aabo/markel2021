@@ -28,6 +28,7 @@ $ltgreen: #829794;
 // BACKGROUNDS
 .blue-bg { background: $blue; color: $white; }
 .red-bg  { background: $red; color: $white; }
+.ltgreen-bg { background: $ltgreen; }
 
 // BUTTONS
 .btn { transition: all 666ms ease; border-radius: 50%; text-transform: uppercase; font-family: 'helvetica-light', sans-serif; font-size: .95em; padding: 8px 35px;
@@ -41,8 +42,9 @@ $ltgreen: #829794;
 
 
 // TEXT COLORS
-.gold-txt { color: $gold; }
-
+.gold-txt  { color: $gold; }
+.red-txt   { color: $red; }
+.white-txt { color: $white; }
 
 // BASE STYLES
 body { font-size: $base-font-size; line-height: $line-height; font-family: 'helvetica'; color: $dkgray; }
