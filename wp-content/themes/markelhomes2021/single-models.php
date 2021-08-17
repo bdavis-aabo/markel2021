@@ -52,6 +52,7 @@
   ?>
   <section class="page-section floorplan-images">
     <div class="floorplan-image-container">
+      <h2 class="gold-txt">Floorplan Layout</h2>
       <ul class="nav nav-pills floorplan-tabs" role="tablist">
         <?php foreach($_floorplanImages as $_image): $_tabLink = strtolower(str_replace(' ', '-', $_image['title'])); ?>
         <li class="nav-item">
@@ -70,9 +71,9 @@
         <?php $_c++; endforeach; ?>
       </div>
 
-      <?php if(get_field('homeplan_brochure') != ''): ?>
-      <div class="brochure container blue-bg">
-        <a href="<?php echo get_field('homeplan_brochure') ?>" title="<?php the_title(); echo ' - Homeplan Brochure'; ?>" target="_blank" class="btn outline-btn gold-txt">
+      <?php if(get_field('homeplan_brochure') != ''): $_brochure = get_field('homeplan_brochure'); ?>
+      <div class="brochure-container blue-bg">
+        <a href="<?php echo $_brochure['url'] ?>" title="<?php the_title(); echo ' - Homeplan Brochure'; ?>" target="_blank" class="btn outline-btn gold-txt">
           Download Home Design Brochure
         </a>
       </div>

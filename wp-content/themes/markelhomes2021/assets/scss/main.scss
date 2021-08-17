@@ -3,6 +3,8 @@
 @import 'forms';
 @import 'maps';
 
+.noscroll { overflow: hidden; }
+
 // HOMEPAGE STYLES
 .home-section { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; padding: 1.5vh 0;
   &.home-heroimage { padding: 0;
@@ -70,6 +72,13 @@
 
 // PAGE TEMPLATE STYLES
 .page-section { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  &.page-heroimage { position: relative; margin-bottom: 3vh;
+    .brand-logo { position: absolute; bottom: -30px; padding: 20px 45px;
+      img { width: 200px; }
+    }
+    &.about-heroimage { margin-bottom: 0; }
+  }
+
   .section-title { text-transform: uppercase; font-family: 'helvetica-light'; font-size: .95em; padding-bottom: 10px;
     &::before { content: '/ '; }
   }
@@ -80,7 +89,7 @@
     .community-container { flex-basis: 100%;
       .community-box { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
         .community-image { margin-bottom: 15px; }
-        .community-details { padding: 20px 0; flex-basis: 60%;
+        .community-details { padding: 20px 0; flex-basis: 72.5%;
           .community-name { margin-bottom: 0; }
           .community-location { text-transform: uppercase; }
           .community-location,
@@ -103,7 +112,7 @@
   &.community-jumplinks {
     .jumplink-container { flex-basis: 95%;
       .jumplinks { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; margin: 15px 0 0; padding: 0; list-style: none;
-        li { text-transform: uppercase; flex-grow: 1; flex-basis: 50%; padding: 5px 0; font-family: 'helvetica-light'; font-size: .95em;
+        li { text-transform: uppercase; padding: 5px 8px; font-family: 'helvetica-light'; font-size: .9em;
           a { color: $dkgray;
             &:hover { color: $gold; }
             &::before { content: '/ '; }
@@ -133,7 +142,7 @@
       }
     }
   }
-  &.community-interactive { margin-bottom: 2.5vh; padding-bottom: 1.5vh;
+  &.community-interactive { margin-bottom: 0; padding-bottom: 3.5vh; display: none;
     .map-title { padding: 1.5vh 0; text-align: center;
       h2 { margin: 8px 0 15px; letter-spacing: 1.5px; }
     }
@@ -145,14 +154,14 @@
     .community-features-container { display: flex; flex-wrap: wrap; justify-content: center;
       .carousel-inner {
         .carousel-item {
-          .community-feature-content { margin: 5.5vh auto 0; padding-bottom: 2.5vh; width: 80%; text-align: center;
+          .community-feature-content { margin: 5.5vh auto 0; padding-bottom: 2vh; width: 80%; text-align: center;
             ul { text-align: left; }
           }
         }
       }
-      .carousel-indicators { bottom: auto; top: 50%; margin-left: 5%; margin-right: 5%;
+      .carousel-indicators { bottom: auto; top: 50%; margin-left: 5%; margin-right: 5%; font-family: 'helvetica-light';
         li { text-indent: 0; width: auto; height: auto; text-transform: uppercase; font-size: .95em; margin-right: 0; border: none; color: $dkgray; opacity: 1;
-          padding: 0 15px;
+          padding: 0 15px; font-size: .9em;
           &::before { content: '/ '; }
           &.active { color: $gold; }
         }
@@ -160,8 +169,136 @@
     }
   }
   .community-brochure-download { padding: 0 0 5vh; }
+
+  // SINGLE FLOORPLAN STYLES
+  &.floorplan-description {
+    .back-btn-container { text-align: left; flex-basis: 95%; padding: 10px 0 25px;
+      a { text-transform: uppercase; color: $ltgray; font-size: .9em; }
+    }
+    .floorplan-contents { flex-basis: 90%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; text-align: center;
+      .floorplan-title { font-size: 30px; margin-bottom: 12px; }
+      h3 { font-size: 24px; line-height: 1em; padding: 0 10%; }
+      p  { padding: 0 5%; }
+    }
+  }
+  &.floorplan-features { margin: 2.5vh 0;
+    .feature-container { flex-basis: 90%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+      h2 { text-align: center; font-size: 30px; margin-bottom: 0; }
+      ul { margin: 10px 0; padding: 0 5%; }
+    }
+  }
+  &.floorplan-images { margin: 2vh 0 3.5vh;
+    .floorplan-image-container { flex-basis: 90%; display: flex; flex-wrap: wrap; justify-content: center;
+      h2 { text-align: center; font-size: 30px; margin-bottom: 20px; }
+      .nav-pills { flex-basis: 100%; display: flex; justify-content: center;
+        .nav-item { flex-basis: 100%;
+          .nav-link { border-radius: 0; text-transform: uppercase; font-size: .9em; color: $blue; background: white;
+            &.active,
+            &:hover { background: $blue; color: $white; }
+          }
+        }
+      }
+      .tab-content { border: 1px solid $blue;
+        .tab-pane {
+          .aligncenter { margin-bottom: 0; }
+          p.floorplan-name { text-transform: uppercase; margin: 15px 0; text-align: center; font-size: .95em; }
+        }
+      }
+      .brochure-container { flex-basis: 100%; text-align: center; padding: 12px 0;
+        .outline-btn {
+          &:hover { color: $white; }
+        }
+      }
+    }
+  }
+
+  // CUSTOM HOME STYLES
+  &.page-content-section { padding: 2.5vh 0;
+    &.house-bg { background: $white url('../images/markel_house-outline.jpg') no-repeat right bottom; background-size: 50%; }
+
+    .content-container { text-align: center; flex-basis: 90%;
+      h2 { color: $gold; font-family: 'helvetica'; font-size: .95em; text-transform: uppercase; padding-bottom: 10px; margin-bottom: 0; }
+      h3 { letter-spacing: 1.5px; }
+      .markel-line_red { width: 65%; margin: 0 auto 25px; }
+      p { font-size: .95em; }
+      blockquote { font-family: 'helvetica-bold'; font-size: 1.15em; color: $dkgray;
+        &::before,
+        &::after { font-family: 'Font Awesome 5 Pro'; font-weight: 900; color: $gold; font-size: 28px; }
+        &::before { content: '\f10d'; }
+        &::after  { content: '\f10e'; }
+      }
+    }
+  }
+
+  &.custom-home-process {
+    .process-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch;
+      .process { text-align: center; padding: 10%;
+        h1 { color: $ltblue; font-size: 32px; line-height: 1em; }
+      }
+    }
+  }
+
+  &.custom-home-locations {
+    .locations-container  { padding: 0;
+      .custom-location { position: relative; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+        figure { margin-bottom: 0; }
+        a { position: absolute; bottom: 40px; }
+      }
+    }
+  }
+
+  // MARKEL DIFFERENCE
+  &.true-callouts-section {
+    .callout { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+      .callout-left { flex-basis: 80%; text-align: center; padding: 10% 0; order: 1;
+        .tile-logo { width: 65%; margin: 0 auto 25px; }
+        h2 { font-size: 32px; margin: 15px 0; }
+        a { color: $gold; }
+      }
+      .callout-right { order: 0;
+        figure { margin-bottom: 0; }
+      }
+    }
+  }
+
+  // NEWS/BLOG PARENT PAGE
+  &.news-section {
+    .news-section-container { text-align: center; padding-top: 2.5vh;
+      h2 { font-family: 'helvetica-light'; font-weight: normal; font-size: .95em; margin-bottom: 0; }
+      h3 { letter-spacing: 1.5px; }
+    }
+  }
+  &.news-article-section {
+    .article-back_btn { padding: 1.5vh 0; flex-basis: 90%;
+      p { text-align: left;
+        a { text-transform: uppercase; color: $ltgray; }
+      }
+    }
+    .article-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+      .news-article { margin-bottom: 2.5vh; text-align: center;
+        .article-title { font-family: 'helvetica-light'; font-size: 1em; line-height: 1.25em; padding: 0 10%; margin-bottom: 12px; }
+        a { text-transform: uppercase; font-family: 'helvetica-light';
+          &:hover { color: $dkgray; }
+        }
+      }
+    }
+  }
 }
 
+// SINGLE NEWS ARTICLE STYLES
+.single {
+  .page-section {
+    &.news-article-section {
+      .article-container {
+        .news-article { flex-basis: 90%;
+          .post-meta { text-transform: uppercase; text-align: center; }
+          .article-title { font-size: 28px; line-height: 1.35em; margin-bottom: 25px; }
+          p { text-align: left; }
+        }
+      }
+    }
+  }
+}
 
 
 

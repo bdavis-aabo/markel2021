@@ -19,7 +19,6 @@
 
   <section class="page-section page-content-section house-bg">
     <div class="content-container">
-      <h1 class="gold-text page-title-small"><?php the_title() ?></h1>
       <?php the_content() ?>
     </div>
   </section>
@@ -45,7 +44,7 @@
           <img src="<?php echo $_homeImage['url'] ?>" title="<?php echo $_homeImage['alt'] ?>" class="img-fluid" />
         </figure>
 
-        <a href="<?php echo get_sub_field('custom_home_link') ?>" title="<?php echo get_sub_field('custom_homes_title') ?>">
+        <a href="<?php echo get_sub_field('custom_home_link') ?>" title="<?php echo get_sub_field('custom_homes_title') ?>" class="btn outline-btn white-btn">
           <?php echo get_sub_field('custom_homes_title') ?>
         </a>
       </article>

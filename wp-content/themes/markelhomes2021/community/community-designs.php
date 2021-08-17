@@ -18,7 +18,7 @@
   <?php if($_designs->have_posts()): ?>
   <section class="page-section community-design" id="designs">
     <div class="design-header">
-      <span class="gold-text section-title">home designs</span>
+      <span class="gold-txt section-title">home designs</span>
       <h2>Available at <?php echo $_currentPage->post_title; ?></h2>
     </div>
 

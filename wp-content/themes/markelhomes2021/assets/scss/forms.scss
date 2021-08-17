@@ -1,0 +1,77 @@
+// FORM STYLES
+.contact-form-section { position: fixed; left: 0; top: 0; overflow-y: scroll; overflow-x: hidden; width: 100%; height: 100%; z-index: 999; display: flex; flex-wrap: wrap; justify-content: center;
+  align-items: center; transform: translateY(100%); opacity: 1; transition: all 666ms ease-in-out;
+  &.active { transform: translateY(0); opacity: 1; }
+
+  .close-contact-btn { position: absolute; right: -15px; top: 10px; border: none; background: none; color: $white; font-size: 36px; }
+
+  .contact-form-container { flex-basis: 90%; margin-top: 10vh;
+    .contact-form-content { text-align: center; margin-bottom: 30px;
+      h1 { letter-spacing: 1.5px; margin-bottom: 15px; }
+      p  { font-size: 1em; font-family: 'helvetica-light'; padding: 0 5%; }
+    }
+  }
+
+  .contact-form {
+    .wpcf7-form {
+      .form-group { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; margin-bottom: 0;
+        .one-half,
+        .one-third,
+        .one-full { flex-basis: 100%; }
+
+        .form-control { background: none; border-radius: 0; border: none; border-bottom: 1px solid $white; color: $white; font-size: .95em; margin-bottom: 15px;
+          height: 40px;
+          &.no-border { border: none; }
+          label { font-family: 'helvetica-light';  text-transform: uppercase; }
+        }
+        p { text-align: center;
+          &.gold-txt { text-transform: uppercase; text-align: left; flex-grow: 1; flex-basis: 100%; }
+
+          .wpcf7-submit { margin: 0 auto; display: block;
+            &:hover { color: $white; }
+          }
+        }
+        &.checkboxes {
+          p { text-align: left; flex-grow: 1; flex-basis: 100%; }
+          .form-control { padding: 0; }
+          .community,
+          .realtor {
+            .regular-checkbox,
+            .wpcf7-radio { display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center;
+              .wpcf7-list-item { flex-basis: 45%; }
+            }
+            .wpcf7-radio {
+              .wpcf7-list-item { flex-basis: 25%; }
+            }
+          }
+        }
+      }
+    }
+    p.disclaimer { font-size: .75em; line-height: 1.25em; color: $ltgray; }
+  }
+}
+
+span.wpcf7-list-item { margin: 0; }
+
+.wpcf7 .wpcf7-list-item { position: relative; display: block; margin-bottom: 10px; }
+.wpcf7-form .wpcf7-radio label { position: relative; cursor: pointer; margin-bottom: 0; }
+.wpcf7-form .wpcf7-radio input[type=radio] { position: relative; visibility: hidden; margin-right: 20px; }
+.wpcf7-form .wpcf7-radio input[type=radio] + span {  }
+.wpcf7-form .wpcf7-radio input[type=radio] + span:before { display: block; position: absolute; content: ''; border-radius: 100%; height: 20px; width: 20px;
+  top: -2px;  }
+.wpcf7-form .wpcf7-radio input[type=radio] + span:after  { display: block; position: absolute; content: ''; border-radius: 100%; height: 20px; width: 20px;
+  top: -2px; left: 0; visibility: visible; border: 1px solid $ltgray !important; }
+.wpcf7-form .wpcf7-radio input[type=radio]:checked + span:before { background: transparent; }
+.wpcf7-form .wpcf7-radio input[type=radio]:checked + span:after  { background: $gold; visibility: visible; border: 0;  }
+
+.wpcf7-form .wpcf7-checkbox label { position: relative; cursor: pointer; }
+.wpcf7-form .wpcf7-checkbox input[type=checkbox] { position: relative; visibility: hidden; opacity: 0; height: 25px; width: 25px; margin-right: 10px; }
+.wpcf7-form .wpcf7-checkbox input[type=checkbox] + span { /* border: 3px solid red; */ }
+.wpcf7-form .wpcf7-checkbox input[type=checkbox] + span:before { display: block; position: absolute; content: ''; border-radius: 0; height: 20px; width: 20px;
+  top: 7px; border: 1px solid $ltgray;  }
+.wpcf7-form .wpcf7-checkbox input[type=checkbox] + span:after { display: block; position: absolute; content: ''; border-radius: 0; height: 20px; width: 20px;
+  top: 7px; left: 0; visibility: hidden; font-size: 16px; }
+.wpcf7-form .wpcf7-checkbox input[type=checkbox]:checked + span:before { background: transparent; visibility: hidden; }
+.wpcf7-form .wpcf7-checkbox input[type=checkbox]:checked + span:after  { background: $gold; visibility: visible; border: 0; }
+
+.wpcf7-list-item-label { text-transform: uppercase; font-family: 'helvetica-light'; line-height: 0; }

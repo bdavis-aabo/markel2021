@@ -32,7 +32,7 @@ $ltgreen: #829794;
 
 // BUTTONS
 .btn { transition: all 666ms ease; border-radius: 50%; text-transform: uppercase; font-family: 'helvetica-light', sans-serif; font-size: .95em; padding: 8px 35px;
-  &.outline-btn { border-radius: 20px; padding: 8px 60px 3px; border: 1px solid $dkgray;
+  &.outline-btn { border-radius: 20px; padding: 8px 50px 3px; border: 1px solid $dkgray;
     &.white-btn { border-color: $white; color: $white;
       &:hover { background: rgba($white, .25); }
     }
