@@ -208,6 +208,16 @@ if(function_exists('register_sidebar'))
 		'before_title'    => '<h3>',
 		'after_title'     => '</h3>'
 	));
+
+  register_sidebar(array(
+    'name'            =>  __('Contact Form Disclaimer', 'contact-disclaimer'),
+    'description'     =>  __('Display disclaimer content below forms', 'contact-disclaimer'),
+    'id'              =>  'contact-disclaimer',
+    'before_widget'   => '',
+		'after_widget'    => '',
+		'before_title'    => '<h3>',
+		'after_title'     => '</h3>'
+  ));
 }
 
 function custom_more_link(){

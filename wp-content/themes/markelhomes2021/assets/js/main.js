@@ -45,9 +45,6 @@ function carouselNormalization(){
 }
 
 
-
-
-
 $(document).ready(function(){
   // Scroll to Anchor
   $(document).on('click', '.jumplinks li a[href^="#"]', function(event){
@@ -68,6 +65,18 @@ $(document).ready(function(){
     var tileH = $('.community-tile').innerHeight();
     $('.tile-container .tile').css('min-height', tileH + 'px');
   });
+
+  $('.contact-btn').click(function(){
+    $('#contact-form').addClass('active');
+    $('html body').addClass('noscroll');
+  });
+
+  $('.close-contact-btn').click(function(){
+    var target = $(this).attr('data-target');
+    $(target).removeClass('active');
+    $('html body').removeClass('noscroll');
+  });
+
 
   carouselNormalization();
 });

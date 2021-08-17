@@ -18,7 +18,6 @@
 
   <section class="page-section community-section">
     <div class="map-container" id="communityMap"></div>
-
     <div class="community-container">
       <?php if($_comms->have_posts()): while($_comms->have_posts()): $_comms->the_post(); ?>
       <article class="community-box" id="<?php echo $post->post_name ?>">

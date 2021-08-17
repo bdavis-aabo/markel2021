@@ -36,10 +36,10 @@
 
 // HEADER STYLES
 .header { width: 100%;
-  .hamburger { z-index: 1; top: 40px; right: 5px; }
+  .hamburger { z-index: 999; top: 40px; right: 5px; }
   .navbar {
-    .navbar-brand {
-      .header-logo { width: 250px; }
+    .navbar-brand { 
+      .header-logo { width: 220px; }
     }
     .navbar-nav { margin-top: 30px; text-transform: uppercase; font-family: 'helvetica-light'; font-size: .95em;
       .menu-item { padding: 5px 10px;
@@ -47,11 +47,15 @@
           &::before { content: '/ '; }
           &:hover { color: $red; }
         }
-        &.current-menu-item {
+        &.current-menu-item,
+        &.current_page_parent {
           a { color: $red; }
         }
-
+        &.contact-btn  {
+          a { cursor: pointer; }
+        }
       }
+
     }
   }
   .nav-subnav {
