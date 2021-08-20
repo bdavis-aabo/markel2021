@@ -9,8 +9,8 @@ if(winW <= 576){
   zoom = 12.5;
   icon = .75;
 } else {
-  zoom = 13.25;
-  icon = .75;
+  zoom = 11;
+  icon = .5;
 }
 
 // mapbox scripts
@@ -20,8 +20,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYnBkYXZpczgxIiwiYSI6ImNrcTQwbDR4NTByZGgycG56N
 var map = new mapboxgl.Map({
   container:  'communityMap',
   style:      'mapbox://styles/bpdavis81/ckrp3kz1jdsld17orqxzahw1y',
-  zoom:       11,
-  center:     [-105.129, 40.068]
+  zoom:       zoom,
+  center:     [-105.140, 40.075]
 });
 var nav = new mapboxgl.NavigationControl();
 map.addControl(nav, 'bottom-left');

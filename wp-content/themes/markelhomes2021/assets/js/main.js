@@ -59,15 +59,22 @@ $(document).ready(function(){
   });
 
   // set Tile Height min-height so all columns are same height
-  var tileH = $('.community-tile').innerHeight();
-  $('.tile-container .tile').css('min-height', tileH + 'px');
-  $(window).resize(function(){
+  if($(window).innerWidth() < 768){
     var tileH = $('.community-tile').innerHeight();
     $('.tile-container .tile').css('min-height', tileH + 'px');
-  });
+    $(window).resize(function(){
+      var tileH = $('.community-tile').innerHeight();
+      $('.tile-container .tile').css('min-height', tileH + 'px');
+    });
+  }
 
   $('.contact-btn').click(function(){
     $('#contact-form').addClass('active');
+    $('html body').addClass('noscroll');
+  });
+
+  $('.realtor-btn').click(function(){
+    $('#realtor-form').addClass('active');
     $('html body').addClass('noscroll');
   });
 

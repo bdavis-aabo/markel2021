@@ -192,7 +192,7 @@
       h2 { text-align: center; font-size: 30px; margin-bottom: 20px; }
       .nav-pills { flex-basis: 100%; display: flex; justify-content: center;
         .nav-item { flex-basis: 100%;
-          .nav-link { border-radius: 0; text-transform: uppercase; font-size: .9em; color: $blue; background: white;
+          .nav-link { border-radius: 0; text-transform: uppercase; font-size: .9em; color: $ltgray; background: white;
             &.active,
             &:hover { background: $blue; color: $white; }
           }
@@ -341,19 +341,282 @@
 
 /*** MEDIUM DEVICES : Tablets, 768px + ***/
 @media (min-width: 768px){
+  .home-section {
+    &.home-content-section {
+      &.house-bg { background-size: 45%; }
+    }
+    &.home-tiles {
+      .tile-container {
+        .tile { flex-basis: 50%; }
+      }
+    }
+    &.news-section {
+      .news-title { flex-basis: 100%; }
+      .news-container { flex-basis: 90%; justify-content: space-between;
+        .latest-post { flex-basis: 48%; }
+      }
+    }
+  }
 
+  // PAGE STYLES
+  .page-section { position: relative;
+
+    &.page-heroimage-section,
+    &.page-heroimage { margin-top: 145px; }
+    // COMMUNITY PARENT PAGE
+    &.community-section { margin-top: 145px;
+      .community-container { display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center;
+        .community-box { flex-basis: 50%; }
+      }
+    }
+
+    // COMMUNITY DETAIL PAGE
+    &.community-jumplinks {
+      .jumplink-container {
+        .jumplinks {
+          li { padding-left: 20px; padding-right: 20px; }
+        }
+      }
+    }
+    &.community-overview {
+      .comm-overview-container {
+        .community-logo { width: 25%; }
+      }
+    }
+    &.community-design {
+      .design-container { flex-basis: 95%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+        .design { flex-basis: 49.5%;
+          &:nth-child(odd) { margin-right: .5%; }
+          .design-info { flex-basis: 90%; text-align: center;
+            p { padding-right: 0; }
+            .outline-btn {
+              &:hover { color: $ltgray; }
+            }
+          }
+        }
+      }
+    }
+    &.community-interactive { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+      .map-container { padding-bottom: 0;
+        &::before { padding-top: 80%; }
+      }
+    }
+    &.community-features {
+      .community-features-container {
+        .carousel-indicators {
+          li { padding: 0 20px; }
+        }
+      }
+      .community-brochure-download {
+        .outline-btn {
+          &:hover { color: $ltgray; }
+        }
+      }
+    }
+
+    // SINGLE FLOORPLAN STYLES
+    &.floorplan-description {
+      .floorplan-contents { flex-basis: 85%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; text-align: center;
+        .floorplan-title { font-size: 36px; margin-bottom: 12px; }
+        h3 { font-size: 28px; line-height: 1em; padding: 0 10%; }
+        p  { padding: 0 15%; }
+      }
+    }
+    &.floorplan-features { margin: 2.5vh 0;
+      .feature-container { flex-basis: 85%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+        h2 { text-align: left; font-size: 30px; margin-bottom: 0; flex-basis: 100%; }
+        ul { margin: 10px 0; padding: 0 2%; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;
+          li { flex-basis: 49%; padding: 0 0 10px; }
+        }
+      }
+    }
+    &.floorplan-images { margin: 2vh 0 3.5vh;
+      .floorplan-image-container { flex-basis: 85%;
+        h2 { text-align: left; flex-basis: 100%; }
+        .nav-pills { justify-content: flex-start;
+          .nav-item { flex-basis: auto; margin-right: 2px; border-bottom: 0;
+            .nav-link { border-radius: 0; text-transform: uppercase; font-size: .9em; border: 1px solid $ultgray; border-bottom: 0;
+              &.active,
+              &:hover { background: $gold; color: $white; }
+            }
+          }
+        }
+        .tab-content { border: 1px solid $ultgray; }
+      }
+    }
+
+    // CUSTOM HOMES & REALTOR PAGE
+    &.page-content-section {
+      &.house-bg { background-size: 45%; }
+      .content-container { flex-basis: 80%;
+        blockquote { padding: 0 15%; }
+      }
+    }
+    &.custom-home-locations {
+      .locations-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+        .custom-location { flex-basis: 50%; }
+      }
+    }
+
+    // MARKEL DIFFERENCE
+
+  }
+
+  .footer { position: relative;  }
 }
 
 /*** LARGE DEVICES : Desktops, 992px and up ***/
 @media (min-width: 992px){
+  .home-section {
+    &.home-content-section {
+      &.house-bg { background-size: 30%;
+        .home-content-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; flex-basis: 75%; }
+      }
+      .home-content-container { display: flex; flex-wrap: nowrap; justify-content: space-between; align-items: center; flex-basis: 85%;
+        .history-left { order: 1; flex-basis: 54%; }
+        .history-right { order: 0; flex-basis: 44%; }
+      }
+    }
+  }
 
+  // PAGE STYLES
+  .page-section {
+    &.page-heroimage-section,
+    &.page-heroimage { margin-top: 60px; }
+    // COMMUNITY DETAIL PAGE
+    &.community-section { margin-top: 60px; }
+  }
 }
 
 /*** EXTRA LARGE DEVICES : Large Desktops, 1200px + ***/
 @media (min-width: 1200px){
+  .home-section {
+    &.home-content-section {
+      &.house-bg {
+        .home-content-container { flex-basis: 45%; }
+      }
+    }
+    &.home-tiles {
+      .tile-container {
+        .tile { flex-basis: 33.333%; }
+      }
+    }
+    &.news-section {
+      .news-title { flex-basis: 100%; }
+      .news-container { flex-basis: 60%; justify-content: space-between;
+        .latest-post { flex-basis: 48%; }
+      }
+    }
+  }
 
+  // PAGE STYLES
+  .page-section {
+    &.page-heroimage-section,
+    &.page-heroimage { margin-top: 83px; }
+
+    // COMMUNITY PARENT PAGE
+    &.community-section { flex-wrap: wrap; margin-top: 83px;
+      .map-container { display: block; flex-basis: 100%; min-height: 50vh; }
+      .community-container { flex-basis: 100%; align-items: flex-start; min-height: auto; padding-top: 0;
+        .community-box { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; flex-basis: 20%;
+          .community-image { margin-bottom: 15px; }
+          .community-details { flex-basis: 90%;
+            p { margin-bottom: 0; text-align: center; }
+            .community-name { font-size: 24px; }
+            .community-location,
+            .community-info { font-size: .95em; margin-bottom: 15px; text-align: left; }
+            .community-btn { padding-left: 25px; padding-right: 25px; }
+          }
+        }
+      }
+    }
+    &.community-link-section { display: none; }
+
+    // COMMUNITY DETAIL PAGE
+    &.community-overview {
+      .comm-overview-container {
+        .community-logo { width: 15%; }
+        h2, p { padding: 0 10%; }
+      }
+    }
+    &.community-design {
+      .design-container { flex-basis: 80%; }
+    }
+
+    // CUSTOM HOMES & REALTOR PAGE
+    &.page-content-section { padding-bottom: 10%;
+      &.house-bg { background-size: 30%; }
+      .content-container { flex-basis: 80%;
+        p { padding: 0 15%; }
+      }
+    }
+    &.custom-home-process {
+      .process-container { flex-wrap: nowrap; align-items: stretch;
+        .process { flex-basis: 33.333%; padding: 5%;
+          .outline-btn { padding-left: 25px; padding-right: 25px; }
+        }
+      }
+    }
+    &.custom-home-locations {
+      .locations-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+        .custom-location { flex-basis: 50%; }
+      }
+    }
+
+
+  }
+
+  // FOOTER STYLES
+  .footer { padding-top: 3vh; padding-bottom: 3vh;
+    .footer-content-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start;
+      div { flex-basis: 100%; text-align: center; }
+      .logo-container {
+        .house-logo { width: 65px; }
+      }
+      .footer-left { border-right: 1px solid $white; }
+      .footer-left,
+      .footer-right { margin-top: 1.5vh; flex-basis: 30%;
+        .footer-title { display: block; text-transform: uppercase; font-family: 'helvetica-light'; font-size: 1.1em; padding-bottom: 12px; }
+        .textwidget {
+          p { font-size: .95em; line-height: 1.35em; }
+        }
+      }
+      .footer-right {
+        .social-links { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; justify-content: center;
+          li { padding: 0;
+            a { color: $white; padding: 0 12px; font-size: 2em; }
+          }
+        }
+      }
+      .footer-copyright { margin-top: 10px; text-transform: uppercase; }
+    }
+  }
 }
 
 /*
 :::::::::: CUSTOM MEDIA QUERIES IF NEEDED ::::::::::
 */
+
+@media (min-width: 1600px){
+
+
+  // PAGE STYLES
+  .page-section {
+    // COMMUNITY PARENT PAGE
+    &.community-section { flex-wrap: nowrap; height: calc(100vh - 471px); overflow: hidden;
+      .map-container { flex-basis: 77.5%; }
+      .community-container { flex-basis: 22.5%; overflow-y: scroll; overflow-x: hidden; padding-top: 40px;
+        .community-box { flex-basis: 100%; }
+      }
+    }
+
+    // COMMUNITY DETAILS PAGE
+    &.community-design {
+      .design-container { flex-basis: 85%; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+        .design { flex-basis: 49.5%;
+          .design-info { flex-basis: 90%; }
+        }
+      }
+    }
+  }
+}

@@ -10,6 +10,9 @@
       h1 { letter-spacing: 1.5px; margin-bottom: 15px; }
       p  { font-size: 1em; font-family: 'helvetica-light'; padding: 0 5%; }
     }
+    .contact-form {
+      .disclaimer { font-size: .8em; font-family: 'helvetica-light'; padding: 0; color: $ltgray; }
+    }
   }
 
   .contact-form {
