@@ -12,7 +12,8 @@
         <ul class="social-links">
           <li><a href="https://www.facebook.com/MarkelHomes/" target="_blank" title="<?php bloginfo('name') ?> on facebook"><i class="fab fa-facebook-f"></i></a></li>
           <li><a href="https://www.instagram.com/markelhomes/" target="_blank" title="<?php bloginfo('name') ?> on Instagram"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="" target="_blank" title="<?php bloginfo('name') ?> on Vimeo"><i class="fab fa-vimeo"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/markel-homes/" target="_blank" title="<?php bloginfo('name') ?> on Vimeo"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="http://houzz.com/pro/markelhomes/markel-homes" target="_blank" title="<?php bloginfo('name') ?> on Houzz"><i class="fab fa-houzz"></i></a></li>
         </ul>
       </div>
       <div class="footer-copyright">
@@ -32,7 +33,9 @@
       <div class="contact-form">
         <?php echo do_shortcode('[contact-form-7 id="5" title="Contact Form"]') ?>
 
-        <p class="disclaimer">Markel Homes will use the information you provide on this form to be in touch with you via email and to provide updates and marketing. You can change your mind at any time by clicking the unsubscribe link in the footer of any email you receive from us, or by contacting us at denise@markelhomes.com. We will treat your information with respect. For more information about our privacy practices please visit our website. By clicking below, you agree that we may process your information in accordance with these terms. We use MailChimp as our marketing automation platform. By clicking below to submit this form, you acknowledge that the information you provide will be transferred to MailChimp for processing in accordance with their Privacy Policy and Terms.</p>
+        <?php if(is_active_sidebar('contact-disclaimer')): ?>
+        <div class="disclaimer"><?php dynamic_sidebar('contact-disclaimer'); ?></div>
+        <?php endif; ?>
       </div>
     </div>
   </section>
@@ -47,6 +50,10 @@
       </div>
       <div class="contact-form">
         <?php echo do_shortcode('[contact-form-7 id="517" title="Broker Registration"]') ?>
+
+        <?php if(is_active_sidebar('contact-disclaimer')): ?>
+        <div class="disclaimer"><?php dynamic_sidebar('contact-disclaimer'); ?></div>
+        <?php endif; ?>
       </div>
     </div>
   </section>

@@ -35,7 +35,14 @@
         <?php endwhile; ?>
         </figure>
         <div class="design-info">
-          <span class="red-txt">Price from $<?php echo get_field('homeplan_price') ?></span>
+          <?php
+          if(get_field('homeplan_availability')):
+            $_field = get_field_object('homeplan_availability');
+            $_value = $_field['value'];
+            $_label = $_field['choices'][$_value];
+          endif;
+          ?>
+          <span class="red-txt"><?php echo get_field('homeplan_price') ?> | <?php echo $_label ?></span>
           <h3 class="design-title"><?php the_title() ?></h3>
           <?php echo get_field('homeplan_details') ?>
           <a href="<?php the_permalink() ?>" title="<?php the_title() ?>" class="btn outline-btn gold-txt">View Floorplan</a>

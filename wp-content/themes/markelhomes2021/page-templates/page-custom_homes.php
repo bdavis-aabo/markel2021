@@ -12,7 +12,11 @@
       <img src="<?php echo $_lgImage['url'] ?>" alt="<?php echo $_lgImage['alt'] ?>" class="pagehero-img img-fluid" />
     </picture>
     <div class="brand-logo blue-bg">
+      <?php if(is_page('custom-homes')): ?>
       <img src="<?php bloginfo('template_directory') ?>/assets/images/brand-logos/true-custom.svg" alt="<?php bloginfo('name') ?> - True Custom" class="img-fluid" />
+      <?php elseif(is_page('realtors')): ?>
+      <img src="<?php bloginfo('template_directory') ?>/assets/images/brand-logos/true-respect.svg" alt="<?php bloginfo('name') ?> - True Respect" class="img-fluid" />
+      <?php endif; ?>
     </div>
   </section>
   <?php endwhile; ?>
@@ -20,6 +24,7 @@
   <section class="page-section page-content-section house-bg">
     <div class="content-container">
       <?php the_content() ?>
+      <?php if(is_page('realtors')): ?><button class="btn outline-btn gold-txt gray-outline realtor-btn" data-target="#realtor">Click here to register</button><?php endif; ?>
     </div>
   </section>
 
