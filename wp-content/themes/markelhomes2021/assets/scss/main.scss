@@ -250,7 +250,7 @@
   // MARKEL DIFFERENCE
   &.true-callouts-section {
     .callout { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
-      .callout-left { flex-basis: 80%; text-align: center; padding: 10% 0; order: 1;
+      .callout-left { text-align: center; padding: 10%; order: 1;
         .tile-logo { width: 65%; margin: 0 auto 25px; }
         h2 { font-size: 32px; margin: 15px 0; }
         a { color: $gold; }
@@ -327,6 +327,10 @@
     .footer-copyright { margin-top: 10px; text-transform: uppercase; }
   }
 }
+.up-btn { position: fixed; right: 20px; bottom: 50px; border-radius: 100%; width: 36px; height: 36px; border: 1px solid $ltgray; background: $white; color: $gold;
+  font-size: 21px; opacity: 0; transition: opacity 666ms ease-in-out;
+  &.visible { opacity: 1; }
+}
 
 /*** SMALL DEVICES : Landscape phones, 576px + ***/
 @media (min-width: 576px){
@@ -384,7 +388,7 @@
       }
     }
     &.community-design {
-      .design-container { flex-basis: 95%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+      .design-container { flex-basis: 95%; display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start;
         .design { flex-basis: 49.5%;
           &:nth-child(odd) { margin-right: .5%; }
           .design-info { flex-basis: 90%; text-align: center;
@@ -406,6 +410,13 @@
         .carousel-indicators {
           li { padding: 0 20px; }
         }
+        .carousel-inner {
+          .carousel-item {
+            .community-feature-content {
+              ul { text-align: center; list-style-position: inside; padding-left: 0; }
+            }
+          }
+        }
       }
       .community-brochure-download {
         .outline-btn {
@@ -417,6 +428,7 @@
     // SINGLE FLOORPLAN STYLES
     &.floorplan-description {
       .floorplan-contents { flex-basis: 85%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; text-align: center;
+        .floorplan-title, h3 { flex-grow: 1; flex-basis: 100%; }
         .floorplan-title { font-size: 36px; margin-bottom: 12px; }
         h3 { font-size: 28px; line-height: 1em; padding: 0 10%; }
         p  { padding: 0 15%; }
@@ -433,15 +445,15 @@
     &.floorplan-images { margin: 2vh 0 3.5vh;
       .floorplan-image-container { flex-basis: 85%;
         h2 { text-align: left; flex-basis: 100%; }
-        .nav-pills { justify-content: flex-start;
-          .nav-item { flex-basis: auto; margin-right: 2px; border-bottom: 0;
-            .nav-link { border-radius: 0; text-transform: uppercase; font-size: .9em; border: 1px solid $ultgray; border-bottom: 0;
+        .nav-pills { justify-content: center; flex-basis: 100%;
+          .nav-item { flex-basis: auto; flex-grow: 1; margin-right: 0; border-bottom: 0;
+            .nav-link { border-radius: 0; text-transform: uppercase; font-size: .9em; border: 1px solid $ultgray; border-bottom: 0; text-align: center;
               &.active,
               &:hover { background: $gold; color: $white; }
             }
           }
         }
-        .tab-content { border: 1px solid $ultgray; }
+        .tab-content { border: 1px solid $ultgray; width: 100%; }
       }
     }
 
@@ -458,7 +470,6 @@
       }
     }
 
-    // MARKEL DIFFERENCE
 
   }
 
@@ -485,6 +496,7 @@
     &.page-heroimage { margin-top: 60px; }
     // COMMUNITY DETAIL PAGE
     &.community-section { margin-top: 60px; }
+
   }
 }
 
@@ -542,6 +554,24 @@
     &.community-design {
       .design-container { flex-basis: 80%; }
     }
+    &.community-features {
+      .community-features-container {
+        .carousel-inner {
+          .carousel-item {
+            .community-feature-content {
+              p { padding-left: 15%; padding-right: 15%; }
+            }
+          }
+        }
+      }
+    }
+
+    // SINGLE FLOORPLAN STYLES
+    &.floorplan-description {
+      .floorplan-contents {
+        p  { padding: 0 20%; }
+      }
+    }
 
     // CUSTOM HOMES & REALTOR PAGE
     &.page-content-section { padding-bottom: 10%;
@@ -562,6 +592,47 @@
         .custom-location { flex-basis: 50%; }
       }
     }
+
+    // MARKEL DIFFERENCE
+    &.true-callouts-section {
+      .callout { display: flex; flex-wrap: nowrap; justify-content: center; align-items: stretch;
+        .callout-left,
+        .callout-right { flex-basis: 50%; }
+        .callout-left { text-align: center; padding: 0; order: 1; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+          .callout-left-contents {
+            .tile-logo { width: auto; margin: 0 auto 30px;
+              img { margin-bottom: 0; }
+            }
+            h2 { font-size: 26px; margin: 15px 0; padding: 0 15%; }
+            a { color: $gold; }
+            p { font-size: .95em; padding: 0 12.5%; }
+          }
+        }
+        .callout-right { order: 0;
+          figure { margin-bottom: 0; }
+        }
+        &:nth-child(odd){
+          .callout-left { order: 0; }
+          .callout-right { order: 1; }
+        }
+
+        &#style {
+          .callout-left {
+            .callout-left-contents {
+              .tile-logo { width: 200px; }
+            }
+          }
+        }
+        &#confidence {
+          .callout-left {
+            .callout-left-contents {
+              .tile-logo { width: 275px; }
+            }
+          }
+        }
+      }
+    }
+
 
 
   }
@@ -598,7 +669,6 @@
 */
 
 @media (min-width: 1600px){
-
 
   // PAGE STYLES
   .page-section {

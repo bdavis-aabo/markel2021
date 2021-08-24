@@ -36,8 +36,9 @@
   <section class="page-section true-callouts-section">
     <div class="callouts-container">
     <?php while(have_rows('true_callouts')): the_row(); $_calloutImage = get_sub_field('callout_photo') ?>
-      <article class="callout <?php if(get_sub_field('callout_title') != 'design'): ?>blue-bg<?php endif; ?>" id="<?php echo get_sub_field('callout_title') ?>" >
-        <div class="callout-left">
+      <article class="callout" id="<?php echo get_sub_field('callout_title') ?>" >
+        <div class="callout-left <?php if(get_sub_field('callout_title') != 'design'): ?>blue-bg<?php endif; ?>">
+          <div class="callout-left-contents">
           <?php if(get_sub_field('callout_title') == 'style'): ?>
           <figure class="tile-logo">
             <img src="<?php bloginfo('template_directory') ?>/assets/images/brand-logos/true-style.svg" alt="<?php echo get_sub_field('callout_title') . '- logo' ?>" class="img-fluid aligncenter"/>
@@ -48,6 +49,7 @@
             </figure>
           <?php endif; ?>
           <?php echo get_sub_field('callout_content') ?>
+          </div>
         </div>
         <div class="callout-right">
           <figure>
