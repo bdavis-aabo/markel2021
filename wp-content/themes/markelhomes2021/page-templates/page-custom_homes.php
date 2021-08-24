@@ -16,6 +16,8 @@
       <img src="<?php bloginfo('template_directory') ?>/assets/images/brand-logos/true-custom.svg" alt="<?php bloginfo('name') ?> - True Custom" class="img-fluid" />
       <?php elseif(is_page('realtors')): ?>
       <img src="<?php bloginfo('template_directory') ?>/assets/images/brand-logos/true-respect.svg" alt="<?php bloginfo('name') ?> - True Respect" class="img-fluid" />
+      <?php elseif(is_page('true-style-design-suites')): ?>
+      <img src="<?php bloginfo('template_directory') ?>/assets/images/brand-logos/true-style.svg" alt="<?php bloginfo('name') ?> - True Style Design Suites" class="img-fluid" />
       <?php endif; ?>
     </div>
   </section>

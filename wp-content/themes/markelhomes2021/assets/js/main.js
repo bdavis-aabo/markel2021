@@ -44,6 +44,17 @@ function carouselNormalization(){
   }
 }
 
+var scrollTopButton = document.getElementById('scrollTopButton');
+var rootElement = document.documentElement;
+
+function scrollToTop() {
+  rootElement.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+scrollTopButton.addEventListener('click', scrollToTop);
+
 
 $(document).ready(function(){
   // Scroll to Anchor
@@ -84,6 +95,14 @@ $(document).ready(function(){
     $('html body').removeClass('noscroll');
   });
 
+  $(window).scroll(function(){
+    var scroll = $(window).scrollTop();
+    if(scroll >= 300){
+      $('.up-btn').addClass('visible');
+    } else {
+      $('.up-btn').removeClass('visible');
+    }
+  });
 
   carouselNormalization();
 });

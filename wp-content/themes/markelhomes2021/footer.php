@@ -59,6 +59,8 @@
   </section>
   <?php endif; ?>
 
+  <button class="up-btn" id="scrollTopButton"><i class="fal fa-arrow-up"></i></button>
+
   <?php wp_footer(); ?>
   </body>
 </html>
