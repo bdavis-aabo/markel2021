@@ -73,12 +73,12 @@ map.on('click', function(e){
   commPopupContent += '<div class="community-details">' +
     '<h3 class="community-name">' + title + '</h2>' +
     '<p class="community-address">' + address + '</p>' +
-    '<p class="community-info">' + product + '<br/>' + footage + ' Sq. Ft. <br />' +
+    '<p class="community-info"><span class="product-txt">' + product + '</span><br/>' + footage + ' Sq. Ft. <br />' +
       bed + ' Beds | ' + bath + ' Baths<br/ >' +
       'Priced From ' + price + '</p>' +
     '</div>';
 
-  var commPopup = new mapboxgl.Popup({ offset: [0,25]})
+  var commPopup = new mapboxgl.Popup({ offset: [0,0]})
     .setLngLat(feature.geometry.coordinates)
     .setHTML(commPopupContent)
     .addTo(map);

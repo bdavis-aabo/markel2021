@@ -1,12 +1,31 @@
+@import 'design';
+
 // MAP STYLES
 .page-section {
   &.community-section { align-items: stretch;
     .map-container,
     .community-container { flex-basis: 50%; }
-
-    .community-container { min-height: 800px; }
   }
 }
 
 
-#communityMap { }
+#communityMap {
+  .mapboxgl-popup { max-width: 300px !important;
+    &.mapboxgl-popup-anchor-top {
+      .mapboxgl-popup-tip { border-bottom-color: $aqua; }
+    }
+    .mapboxgl-popup-tip { border-top-color: $aqua; }
+    .mapboxgl-popup-content { background: $aqua; padding: 0; color: $white;
+      .mapboxgl-popup-close-button { color: $white; font-size: 24px; text-shadow: 0 0 4px rgba($black,.5); }
+
+      .community-details { padding: 15px; text-align: center;
+        .community-name { font-size: 26px; margin-bottom: 0; }
+        .community-address,
+        .community-info { font-size: 14px; }
+
+        .community-info { line-height: 21px; }
+      }
+    }
+  }
+
+}
