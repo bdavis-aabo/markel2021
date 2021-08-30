@@ -78,3 +78,69 @@ span.wpcf7-list-item { margin: 0; }
 .wpcf7-form .wpcf7-checkbox input[type=checkbox]:checked + span:after  { background: $gold; visibility: visible; border: 0; }
 
 .wpcf7-list-item-label { text-transform: uppercase; font-family: 'helvetica-light'; line-height: 0; }
+
+
+/*** SMALL DEVICES : Landscape phones, 576px + ***/
+@media (min-width: 576px){
+
+}
+
+/*** IPHONE X : Landscape ***/
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+
+}
+
+/*** MEDIUM DEVICES : Tablets, 768px + ***/
+@media (min-width: 768px){
+  .contact-form-section {
+    .close-contact-btn { right: 20px; }
+
+    .contact-form {
+      .wpcf7-form {
+        .form-group { justify-content: space-between;
+          .one-half { flex-basis: 49%; }
+          .one-third { flex-basis: 32.5%; }
+
+          &.checkbox-group {
+            .wpcf7-checkbox { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+              .wpcf7-list-item { padding-right: 15px; }
+            }
+          }
+          &.radio-group { justify-content: flex-start;
+            .wpcf7-radio { display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center;
+              .wpcf7-list-item { padding-right: 15px; }
+            }
+          }
+          &.submit-group { justify-content: center; }
+        }
+      }
+    }
+  }
+}
+
+/*** LARGE DEVICES : Desktops, 992px and up ***/
+@media (min-width: 992px){
+  .contact-form-section {
+    .contact-form {
+      .wpcf7-form {
+        .form-group {
+          &.checkbox-group {
+            .wpcf7-checkbox {
+              .wpcf7-list-item { padding-right: 45px; }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*** EXTRA LARGE DEVICES : Large Desktops, 1200px + ***/
+@media (min-width: 1200px){
+
+}
+
+/*
+:::::::::: CUSTOM MEDIA QUERIES IF NEEDED ::::::::::
+*/

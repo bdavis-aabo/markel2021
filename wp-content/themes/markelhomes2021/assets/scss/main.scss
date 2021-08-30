@@ -274,6 +274,21 @@
         a { text-transform: uppercase; color: $ltgray; }
       }
     }
+    .article-categories { flex-basis: 100%; margin: 15px 0 30px;
+      .news-sidebar { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+        h3 { display: none; }
+        ul { flex-basis: 95%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; list-style: none; margin: 0; padding: 0;
+          li { text-transform: uppercase; font-size: .9em; font-family: 'helvetica-light'; padding: 0 5px;
+            a { color: $dkgray;
+              &:hover { color: $red; }
+            }
+            &.current-cat {
+              a { color: $red; }
+            }
+          }
+        }
+      }
+    }
     .article-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
       .news-article { margin-bottom: 2.5vh; text-align: center;
         .article-title { font-family: 'helvetica-light'; font-size: 1em; line-height: 1.25em; padding: 0 10%; margin-bottom: 12px; }
@@ -356,8 +371,8 @@
     }
     &.news-section {
       .news-title { flex-basis: 100%; }
-      .news-container { flex-basis: 90%; justify-content: space-between;
-        .latest-post { flex-basis: 48%; }
+      .news-container { flex-basis: 90%; justify-content: space-between; align-items: flex-start;
+        .latest-post { flex-basis: 32.5%; }
       }
     }
   }
@@ -470,7 +485,8 @@
       }
     }
 
-
+    // NEWS STYLES
+    &.news-section { margin-top: 150px; }
   }
 
   .footer { position: relative;  }
@@ -486,6 +502,15 @@
       .home-content-container { display: flex; flex-wrap: nowrap; justify-content: space-between; align-items: center; flex-basis: 85%;
         .history-left { order: 1; flex-basis: 54%; }
         .history-right { order: 0; flex-basis: 44%; }
+      }
+    }
+    &.home-quote-section {
+      .carousel {
+        .carousel-inner { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+          .carousel-item { flex-basis: 60%; margin: 0 auto; font-size: 19px; line-height: 30px; padding: 3.5vh 12%;
+            .fas { font-size: 1.5em; }
+          }
+        }
       }
     }
   }
@@ -515,8 +540,8 @@
     }
     &.news-section {
       .news-title { flex-basis: 100%; }
-      .news-container { flex-basis: 60%; justify-content: space-between;
-        .latest-post { flex-basis: 48%; }
+      .news-container { flex-basis: 80%; justify-content: space-between;
+        .latest-post { flex-basis: 32%; }
       }
     }
   }
@@ -577,7 +602,7 @@
     &.page-content-section { padding-bottom: 10%;
       &.house-bg { background-size: 30%; }
       .content-container { flex-basis: 80%;
-        p { padding: 0 15%; }
+        p { padding: 0 20%; margin-bottom: 25px; font-size: 1.05em; line-height: 1.85em; }
       }
     }
     &.custom-home-process {
@@ -588,8 +613,8 @@
       }
     }
     &.custom-home-locations {
-      .locations-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
-        .custom-location { flex-basis: 50%; }
+      .locations-container { flex-basis: 80%; padding: 3vh 0; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+        .custom-location { flex-basis: 49.75%; }
       }
     }
 
@@ -633,8 +658,33 @@
       }
     }
 
+    // NEWS STYLES
+    &.news-section { margin-top: 125px; }
+    &.news-article-section {
+      .article-categories { flex-basis: 100%; margin: 15px 0 30px;
+        .news-sidebar {
+          ul {
+            li { font-size: .95em; padding: 0 20px;
+            }
+          }
+        }
+      }
+      .article-container { flex-basis: 70%; justify-content: space-between; align-items: flex-start;
+        .news-article { flex-basis: 48%;
+          p { text-align: center; font-family: 'helvetica-light'; }
+        }
+      }
+    }
 
+    &.article-heroimage-section { margin-top: 80px; }
+  }
 
+  .single-post {
+    .page-section {
+      &.news-article-section {
+        .article-container { justify-content: center; margin-bottom: 100px; }
+      }
+    }
   }
 
   // FOOTER STYLES
@@ -676,7 +726,12 @@
     &.community-section { flex-wrap: nowrap; height: calc(100vh - 471px); overflow: hidden;
       .map-container { flex-basis: 77.5%; }
       .community-container { flex-basis: 22.5%; overflow-y: scroll; overflow-x: hidden; padding-top: 40px;
-        .community-box { flex-basis: 100%; }
+        .community-box { flex-basis: 100%;
+          .community-image { margin-bottom: 0; }
+          .community-details {
+            .community-location { margin-bottom: 8px; }
+          }
+        }
       }
     }
 

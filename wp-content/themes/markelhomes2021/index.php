@@ -9,6 +9,16 @@
 
   <?php if(have_posts()): ?>
   <section class="page-section news-article-section">
+    <div class="article-categories">
+      <?php if(is_active_sidebar('news-sidebar')): dynamic_sidebar('news-sidebar'); endif; ?>
+    </div>
+
+    <?php if(is_category()): ?>
+    <div class="article-back_btn">
+      <p><a href="/news" title="<?php bloginfo('name') ?> - Back to News" class="">/ back to news</a></p>
+    </div>
+    <?php endif; ?>
+
     <div class="article-container">
     <?php while(have_posts()): the_post(); ?>
       <article class="news-article" id="<?php echo 'news-article-' . $post->ID ?>">
