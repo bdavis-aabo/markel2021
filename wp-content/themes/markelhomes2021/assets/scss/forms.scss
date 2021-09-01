@@ -138,7 +138,9 @@ span.wpcf7-list-item { margin: 0; }
 
 /*** EXTRA LARGE DEVICES : Large Desktops, 1200px + ***/
 @media (min-width: 1200px){
-
+  .contact-form-section {
+    .contact-form-container { flex-basis: 65%; }
+  }
 }
 
 /*
