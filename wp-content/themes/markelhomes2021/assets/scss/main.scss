@@ -181,6 +181,13 @@
       p  { padding: 0 5%; }
     }
   }
+  &.floorplan-gallery {
+    .gallery-container { flex-basis: 85%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+      .envira-gallery-wrap { margin-bottom: 0;
+        .envira-gallery-public { margin-bottom: 0; }
+      }
+    }
+  }
   &.floorplan-features { margin: 2.5vh 0;
     .feature-container { flex-basis: 90%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
       h2 { text-align: center; font-size: 30px; margin-bottom: 0; }
@@ -447,6 +454,13 @@
         .floorplan-title { font-size: 36px; margin-bottom: 12px; }
         h3 { font-size: 28px; line-height: 1em; padding: 0 10%; }
         p  { padding: 0 15%; }
+      }
+    }
+    &.floorplan-gallery { padding: 3.5vh 0;
+      .gallery-container { flex-basis: 95%;
+        .envira-gallery-wrap { margin-bottom: 0;
+          .envira-gallery-public { margin-bottom: 0; }
+        }
       }
     }
     &.floorplan-features { margin: 2.5vh 0;

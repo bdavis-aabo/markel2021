@@ -30,10 +30,10 @@
     </div>
   </section>
 
-  <?php if(get_field('homeplan_gallery') != ''): ?>
+  <?php if(get_field('homeplan_gallery') != ''): $_gallery = get_field('homeplan_gallery'); ?>
   <section class="page-section floorplan-gallery">
-    <div class="gallery-container">
-      insert gallery code
+    <div class="gallery-container" id="<?php echo $post->post_name . '-gallery'; ?>">
+      <?php echo do_shortcode($_gallery) ?>
     </div>
   </section>
   <?php endif; ?>
