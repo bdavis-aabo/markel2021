@@ -268,6 +268,15 @@
     }
   }
 
+  // PHOTO GALLERY
+  &.gallery-section { padding: 2px 0;
+    .gallery-container { flex-basis: 100%;
+      .envira-gallery-wrap { margin: 0 auto 2px;
+        .envira-gallery-public { margin-bottom: 0; }
+      }
+    }
+  }
+
   // NEWS/BLOG PARENT PAGE
   &.news-section {
     .news-section-container { text-align: center; padding-top: 2.5vh;
@@ -536,7 +545,17 @@
     // COMMUNITY DETAIL PAGE
     &.community-section { margin-top: 60px; }
 
+    // PHOTO GALLERY
+    &.gallery-section { padding: 2.5vh 0;
+      .gallery-container { flex-basis: 80%;
+        .envira-gallery-wrap { margin: 0 auto 2px;
+          .envira-gallery-public { margin-bottom: 0; }
+        }
+      }
+    }
   }
+
+
 }
 
 /*** EXTRA LARGE DEVICES : Large Desktops, 1200px + ***/
