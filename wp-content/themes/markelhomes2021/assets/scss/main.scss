@@ -332,6 +332,11 @@
 }
 
 
+// envira gallery styles
+.envirabox-bg { background: rgba($black,.9) !important; }
+.envirabox-theme-base {
+  .envirabox-image-wrap { border: none !important; border-radius: 0 !important; }
+}
 
 // FOOTER STYLES
 .footer { padding-top: 3vh; padding-bottom: 3vh;
@@ -546,9 +551,9 @@
     &.community-section { margin-top: 60px; }
 
     // PHOTO GALLERY
-    &.gallery-section { padding: 2.5vh 0;
-      .gallery-container { flex-basis: 80%;
-        .envira-gallery-wrap { margin: 0 auto 2px;
+    &.gallery-section { padding: 0;
+      .gallery-container { flex-basis: 99.9%;
+        .envira-gallery-wrap { margin: 2px auto 2px;
           .envira-gallery-public { margin-bottom: 0; }
         }
       }
