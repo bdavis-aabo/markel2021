@@ -28,7 +28,7 @@
           <h3 class="community-name"><?php the_title() ?></h3>
           <p class="community-location"><?php echo get_field('location') ?></p>
           <p class="community-info">
-            <?php echo get_field('square_footage') . '  |  ' . get_field('beds') . ' beds  |  ' . get_field('baths') . ' baths' ?><br />
+            <?php echo get_field('square_footage') ?><br />
             Priced from $<?php echo get_field('pricing'); ?>
           </p>
           <p><a href="<?php the_permalink(); ?>" title="<?php the_title() ?>" class="btn outline-btn gold-txt community-btn">visit community</a></p>
