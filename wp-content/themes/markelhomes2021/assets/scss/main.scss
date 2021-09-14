@@ -125,6 +125,7 @@
     .comm-overview-container { flex-basis: 80%; text-align: center;
       .community-logo { width: 45%; margin: 0 auto 20px; }
       h2 { margin-top: 15px; }
+      a { color: $gold; }
     }
   }
   &.community-design { padding: 2.5vh 0;
