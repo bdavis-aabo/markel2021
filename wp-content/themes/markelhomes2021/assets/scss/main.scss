@@ -792,7 +792,7 @@
   .page-section {
     // COMMUNITY PARENT PAGE
     &.community-section { min-height: calc(100vh - 120px);
-      .map-container {  }
+      .map-container { min-height: 700px; }
     }
   }
 }
