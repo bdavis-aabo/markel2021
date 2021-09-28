@@ -46,6 +46,7 @@
             .tile-overlay { transform: translateY(0); opacity: 1; }
           }
         }
+        &.blue-bg { padding: 3vh 0; }
       }
     }
   }
@@ -85,7 +86,7 @@
 
   // COMMUNITY PARENT PAGE
   &.community-section {
-    .map-container { display: none; }
+    .map-container { display: block; height: 600px; margin-top: 140px; }
     .community-container { flex-basis: 100%;
       .community-box { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
         .community-image { margin-bottom: 15px; }
@@ -95,7 +96,7 @@
           .community-location,
           .community-info { font-family: 'helvetica-light'; line-height: 1.65em; }
         }
-        .community-link { padding-bottom: 20px; }
+        .community-link { padding-bottom: 0px; }
       }
     }
   }
@@ -389,7 +390,9 @@
     }
     &.home-tiles {
       .tile-container {
-        .tile { flex-basis: 50%; }
+        .tile { flex-basis: 50%;
+          &.blue-bg { padding: 0; }
+        }
       }
     }
     &.news-section {
@@ -407,6 +410,7 @@
     &.page-heroimage { margin-top: 145px; }
     // COMMUNITY PARENT PAGE
     &.community-section { margin-top: 145px;
+      .map-container { margin-top: 0; }
       .community-container { display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: flex-start;
         .community-box { flex-basis: 50%; }
       }
@@ -550,7 +554,10 @@
     &.page-heroimage-section,
     &.page-heroimage { margin-top: 60px; }
     // COMMUNITY DETAIL PAGE
-    &.community-section { margin-top: 60px; }
+    &.community-section { margin-top: 60px;
+      .map-container,
+      .community-container { flex-basis: 100%; }
+    }
 
     // PHOTO GALLERY
     &.gallery-section { padding: 0;
@@ -592,20 +599,13 @@
     &.page-heroimage { margin-top: 83px; }
 
     // COMMUNITY PARENT PAGE
-    &.community-section { flex-wrap: wrap; margin-top: 83px;
-      .map-container { display: block; flex-basis: 100%; min-height: 50vh; }
-      .community-container { flex-basis: 100%; align-items: flex-start; min-height: auto; padding-top: 0;
-        .community-box { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; flex-direction: row; flex-basis: 20%;
-          .community-image { margin-bottom: 0; }
-          .community-details { flex-basis: 90%;
-            p { margin-bottom: 0; text-align: center; }
-            .community-name { font-size: 24px; }
-            .community-location,
-            .community-info { font-size: .95em; margin-bottom: 15px; text-align: left; }
-            .community-info { align-self: stretch; }
-          }
-          .community-link {
-            .community-btn { padding-left: 25px; padding-right: 25px; align-self: flex-end; padding-bottom: 0; }
+    &.community-section { flex-wrap: nowrap; overflow: hidden; align-items: stretch;
+      .map-container { flex-basis: 40%; height: 100% !important; }
+      .community-container { flex-basis: 60%; padding-top: 20px;
+        .community-box { flex-basis: 100%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; border-bottom: 1px solid $ultgray;
+          .community-image { margin-bottom: 0; flex-basis: 45%; }
+          .community-details { flex-basis: 55%; padding: 0 4vw;
+            .community-location { margin-bottom: 8px; }
           }
         }
       }
@@ -765,17 +765,17 @@
   // PAGE STYLES
   .page-section {
     // COMMUNITY PARENT PAGE
-    &.community-section { flex-wrap: nowrap; height: calc(100vh - 471px); overflow: hidden;
-      .map-container { flex-basis: 77.5%; }
-      .community-container { flex-basis: 22.5%; overflow-y: scroll; overflow-x: hidden; padding-top: 40px;
-        .community-box { flex-basis: 100%;
-          .community-image { margin-bottom: 0; }
-          .community-details {
-            .community-location { margin-bottom: 8px; }
-          }
-        }
-      }
-    }
+    // &.community-section { flex-wrap: nowrap; height: calc(100vh - 471px); overflow: hidden;
+    //   .map-container { flex-basis: 77.5%; }
+    //   .community-container { flex-basis: 22.5%; overflow-y: scroll; overflow-x: hidden; padding-top: 40px;
+    //     .community-box { flex-basis: 100%;
+    //       .community-image { margin-bottom: 0; }
+    //       .community-details {
+    //         .community-location { margin-bottom: 8px; }
+    //       }
+    //     }
+    //   }
+    // }
 
     // COMMUNITY DETAILS PAGE
     &.community-design {
@@ -789,10 +789,10 @@
 }
 
 @media (min-width: 992px) and (min-height: 750px){
-  .page-section {
-    // COMMUNITY PARENT PAGE
-    &.community-section { min-height: calc(100vh - 120px);
-      .map-container { min-height: 700px; }
-    }
-  }
+  // .page-section {
+  //   // COMMUNITY PARENT PAGE
+  //   &.community-section { min-height: calc(100vh - 120px);
+  //     .map-container { min-height: 700px; }
+  //   }
+  // }
 }

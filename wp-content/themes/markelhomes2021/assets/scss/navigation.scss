@@ -35,9 +35,9 @@
 }
 
 // HEADER STYLES
-.header { width: 100%; background: transparent; position: relative; z-index: 999;
+.header { width: 100%; background: transparent; position: fixed; z-index: 999; top: 0;
   .hamburger { z-index: 999; top: 40px; right: 5px; }
-  .navbar { background: $white;
+  .navbar { background: $white; box-shadow: 0 1px 4px rgba($black, .25);
     .navbar-brand {
       .header-logo { width: 220px; }
     }
@@ -50,9 +50,19 @@
         &.current-menu-item,
         &.current_page_parent {
           a { color: $red; }
+          .sub-menu {
+            a { color: $dkgray; }
+            .current-menu-item {
+              a { color: $red; }
+            }
+          }
         }
         &.contact-btn  {
           a { cursor: pointer; }
+        }
+
+        &.menu-item-has-children { position: relative;
+          .sub-menu { width: 225px; background: $white; list-style: none; padding: 0; }
         }
       }
 
@@ -81,7 +91,22 @@
 
 /*** MEDIUM DEVICES : Tablets, 768px + ***/
 @media (min-width: 768px){
-  .header { position: absolute; top: 0; left: 0; }
+  .header {
+    .navbar {
+      .navbar-nav {
+        .menu-item {
+          &.menu-item-has-children { position: relative;
+            .sub-menu { position: absolute; z-index: 0; top: 35px; left: 0; width: 225px; background: $white; list-style: none; padding: 20px 0 15px 0;
+              opacity: 0; transform: translateY(-500px); transition: transform 666ms linear, opacity 666ms linear .5s;
+            }
+            &:hover {
+              .sub-menu { transform: translateY(0); opacity: 1; }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /*** LARGE DEVICES : Desktops, 992px and up ***/
@@ -89,7 +114,9 @@
   .header {
       .nav-subnav {
         .menu { display: flex; flex-wrap: nowrap; justify-content: flex-end; align-items: center;
-          .menu-item { flex-basis: 20%; text-align: center; }
+          .menu-item { flex-basis: 20%; text-align: center;
+
+          }
         }
       }
   }

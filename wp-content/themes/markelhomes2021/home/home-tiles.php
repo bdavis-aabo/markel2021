@@ -16,14 +16,18 @@
       <?php else: ?>
       <article class="tile difference-tile blue-bg">
         <div class="tile-contents">
-            <?php if(get_sub_field('tile_logo') != ''): $_tileLogo = get_sub_field('tile_logo'); ?>
-            <figure class="tile-logo">
-              <img src="<?php echo $_tileLogo['url'] ?>" alt="<?php echo $_tileLogo['alt'] ?>" class="img-fluid aligncenter"/>
-            </figure>
-            <?php endif; ?>
-            <?php echo get_sub_field('tile_contents') ?>
-            <a href="<?php echo get_sub_field('tile_link') ?>" class="btn outline-btn white-btn">learn more</a>
+          <?php if(get_sub_field('tile_logo') != ''): $_tileLogo = get_sub_field('tile_logo'); ?>
+          <figure class="tile-logo">
+            <img src="<?php echo $_tileLogo['url'] ?>" alt="<?php echo $_tileLogo['alt'] ?>" class="img-fluid aligncenter"/>
+          </figure>
+          <?php endif; ?>
 
+          <?php echo get_sub_field('tile_contents') ?>
+          <?php if($_tileLogo['title'] == 'true-opportunity'): ?>
+            <a href="/#contact" class="btn outline-btn white-btn contact-btn">learn more</a>
+          <?php else: ?>
+            <a href="<?php echo get_sub_field('tile_link') ?>" class="btn outline-btn white-btn">learn more</a>
+          <?php endif; ?>
         </div>
       </article>
       <?php endif; ?>

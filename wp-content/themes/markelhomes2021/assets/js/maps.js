@@ -3,14 +3,19 @@ var zoom;
 var icon;
 
 if(winW <= 576){
-  zoom = 12;
+  zoom = 10.5;
   icon = .5;
 } else if (winW <= 768){
-  zoom = 12.5;
-  icon = .75;
+  zoom = 10.5;
+  icon = .5;
 } else {
   zoom = 11;
   icon = .5;
+}
+
+if(winW > 1200){
+  boxH = $('.community-container').innerHeight();
+  $('.map-container').css('min-height', boxH + 'px');
 }
 
 // mapbox scripts
@@ -25,12 +30,13 @@ var map = new mapboxgl.Map({
 });
 var nav = new mapboxgl.NavigationControl();
 map.addControl(nav, 'bottom-left');
+map.scrollZoom.disable();
 
 map.on('load', function(){
   // Create Layers
   map.addSource('communities', {
     type: 'vector',
-    url:  'mapbox://bpdavis81.ckrr8ga4n131t20lanhopp3vh-1yv28'
+    url:  'mapbox://bpdavis81.ckrr8ga4n131t20lanhopp3vh-1yv28',
   });
 
   map.addLayer({
@@ -57,6 +63,8 @@ map.on('click', function(e){
 
   // Define Data fields
   var title =      feature.properties.title;
+  var shortTitle = title.replace(' ', '-');
+  shortTitle = shortTitle.toLowerCase();
   var address =    feature.properties.address;
   var phone =      feature.properties.phone;
   var product =    feature.properties.product;
@@ -76,6 +84,7 @@ map.on('click', function(e){
     '<p class="community-info"><span class="product-txt">' + product + '</span><br/>' +
     // footage + ' Sq. Ft. <br />' + bed + ' Beds | ' + bath + ' Baths<br/ >' +
       'Priced From ' + price + '</p>' +
+    '<p class="community-info"><a href="/communities/' + shortTitle + '" class="btn outline-btn white-btn">visit community</a></p>' +
     '</div>';
 
   var commPopup = new mapboxgl.Popup({ offset: [0,0]})
