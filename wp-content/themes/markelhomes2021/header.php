@@ -55,7 +55,7 @@
       </div>
     </nav>
 
-    <div class="nav-subnav">
+    <div class="nav-subnav <?php if(is_page('communities')): echo 'invisible'; endif; ?>">
       <?php wp_nav_menu(array('menu'=>'sub-menu')) ?>
     </div>
   </header>
