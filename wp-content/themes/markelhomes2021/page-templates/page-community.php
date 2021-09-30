@@ -39,22 +39,27 @@
 
   <?php get_template_part('community/community-designs') ?>
 
-  <?php if(get_field('community_map') != ''): ?>
+  <?php if(get_field('community_map') != ''): $_mapImage = get_field('community_map_image'); ?>
   <section class="page-section community-interactive ltgreen-bg" id="map">
     <div class="map-title">
       <span class="white-txt section-title">community map</span>
       <h2 class="white-txt"><?php echo 'at '; the_title(); ?></h2>
     </div>
-    <div class="map-container embed-responsive embed-responsive-1by1">
+    <div class="map-container embed-responsive embed-responsive-1by1 nomobile">
       <iframe src="<?php echo get_field('community_map') ?>" class="interactive-map embed-responsive-item"></iframe>
+    </div>
+    <div class="map-container mobileonly">
+      <figure>
+        <img src="<?php echo $_mapImage['url'] ?>" class="img-fluid" alt="<?php the_title(); ?> - Community Map" />
+      </figure>
     </div>
   </section>
   <?php endif; ?>
 
-  <?php if(get_field('community_map_file') != ''): ?>
+  <?php if(get_field('community_map_file') != ''): $_mapFile = get_field('community_map_file');?>
   <section class="page-section community-download blue-bg">
     <div class="download-container">
-      <a href="<?php echo get_field('community_map_file') ?>" title="<?php the_title() ?> - Map Download" target="_blank" class="btn outline-btn gold-txt">
+      <a href="<?php echo $_mapFile['url'] ?>" title="<?php the_title() ?> - Map Download" target="_blank" class="btn outline-btn gold-txt">
         Download Community Map
       </a>
     </div>
