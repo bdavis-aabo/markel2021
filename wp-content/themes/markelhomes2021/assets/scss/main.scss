@@ -7,10 +7,10 @@
 
 // HOMEPAGE STYLES
 .home-section { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; padding: 1.5vh 0;
-  &.home-heroimage { padding: 0;
-    .homepage-heroimage { position: relative; top: 0; left: 0;
+  &.home-heroimage { padding: 0; margin-top: 140px;
+    .home-carousel { position: relative;
       .heroimage-caption  { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-transform: uppercase; color: $white; z-index: 1; width: 100%;
-        text-align: center; margin-bottom: 0; line-height: 1; text-shadow: 0 0 15px rgba($black, .5);
+        text-align: center; margin-bottom: 0; line-height: 1; text-shadow: 0 0 15px rgba($black, .5); font-size: 60px;
       }
     }
   }
@@ -185,10 +185,12 @@
     }
   }
   &.floorplan-gallery {
-    .gallery-container { flex-basis: 85%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+    .gallery-container { flex-basis: 85%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; position: relative;
       .envira-gallery-wrap { margin-bottom: 0;
         .envira-gallery-public { margin-bottom: 0; }
       }
+
+      .plus-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; opacity: .85; }
     }
   }
   &.floorplan-features { margin: 2.5vh 0;
@@ -339,6 +341,9 @@
 .envirabox-bg { background: rgba($black,.9) !important; }
 .envirabox-theme-base {
   .envirabox-image-wrap { border: none !important; border-radius: 0 !important; }
+}
+.envirabox-navigation {
+  .envirabox-arrow { font-size: 30px; }
 }
 
 // FOOTER STYLES
@@ -529,6 +534,7 @@
 /*** LARGE DEVICES : Desktops, 992px and up ***/
 @media (min-width: 992px){
   .home-section {
+    &.home-heroimage { margin-top: 60px; }
     &.home-content-section {
       &.house-bg { background-size: 30%;
         .home-content-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; flex-basis: 75%; }

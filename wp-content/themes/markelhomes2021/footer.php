@@ -18,6 +18,7 @@
       </div>
       <div class="footer-copyright">
         <p class="small">&copy; <?php echo date('Y') . ' '; bloginfo('name') ?></p>
+        <p><img src="<?php bloginfo('template_directory') ?>/assets/images/eho-icon.png" class="img-fluid aligncenter" /></p>
       </div>
     </section>
   </footer>
