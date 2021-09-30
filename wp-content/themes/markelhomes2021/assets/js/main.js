@@ -105,4 +105,24 @@ $(document).ready(function(){
   });
 
   carouselNormalization();
+
+  // Homepage Lightbox Functions
+  function displayLightbox(){
+    $('html body').addClass('is-active');
+    $('#homepageLightbox').addClass('is-active');
+  }
+  function closeLightbox(){
+    $('html body').removeClass('is-active');
+    $('#homepageLightbox').removeClass('is-active');
+  }
+
+  if(window.location.pathname === '/'){
+    setTimeout(function(){
+      displayLightbox();
+    }, 5000);
+  }
+
+  $('.closeLightbox').click(function(){
+    closeLightbox();
+  });
 });

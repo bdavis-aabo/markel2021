@@ -60,6 +60,16 @@
   </section>
   <?php endif; ?>
 
+  <?php if(is_page('markel-homes-and-communities')): ?>
+  <section class="homepage-lightbox dark-bg" id="homepageLightbox">
+    <div class="lightbox-contents">
+      <button class="closeLightbox"><i class="fal fa-times"></i></button>
+      <img src="<?php bloginfo('template_directory') ?>/assets/images/mask-icon.png" class="aligncenter img-fluid" alt="mask icon" />
+      <?php if(is_active_sidebar('covid-sidebar')): dynamic_sidebar('covid-sidebar'); endif; ?>
+    </div>
+  </section>
+  <?php endif; ?>
+
   <button class="up-btn" id="scrollTopButton"><i class="fal fa-arrow-up"></i></button>
 
   <?php wp_footer(); ?>

@@ -5,12 +5,16 @@
 
 .noscroll { overflow: hidden; }
 
+html, body {
+  &.is-active { overflow: hidden; }
+}
+
 // HOMEPAGE STYLES
 .home-section { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; padding: 1.5vh 0;
   &.home-heroimage { padding: 0; margin-top: 140px;
     .home-carousel { position: relative;
       .heroimage-caption  { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-transform: uppercase; color: $white; z-index: 1; width: 100%;
-        text-align: center; margin-bottom: 0; line-height: 1; text-shadow: 0 0 15px rgba($black, .5); font-size: 60px;
+        text-align: center; margin-bottom: 0; line-height: 1; text-shadow: 0 0 15px rgba($black, .5); font-size: 48px;
       }
     }
   }
@@ -135,7 +139,7 @@
       h2 { margin-top: 15px; }
     }
     .design-container {
-      .design { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+      .design { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; margin-bottom: 30px;
         .design-image { margin-bottom: 15px; }
         .design-info { padding: 20px 0; flex-basis: 60%;
           .red-txt { text-transform: uppercase; }
@@ -376,6 +380,18 @@
   &.visible { opacity: 1; }
 }
 
+.homepage-lightbox { position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 999; background: rgba($black,.9); transform: translateY(100%); opacity: 0;
+  transition: all 666ms linear;
+  .lightbox-contents { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 80%; background: $aqua; color: $white; padding: 30px;
+    .closeLightbox { position: absolute; right: 10px; top: 10px; background: transparent; border: none; color: $white; font-size: 36px; cursor: pointer; }
+    .covid-sidebar {
+      p { font-family: 'helvetica-light'; font-size: 17px; line-height: 28px; text-align: center; padding: 0 5%; }
+    }
+  }
+
+  &.is-active { transform: translateY(0); opacity: 1; }
+}
+
 /*** SMALL DEVICES : Landscape phones, 576px + ***/
 @media (min-width: 576px){
 
@@ -529,12 +545,20 @@
   }
 
   .footer { position: relative;  }
+
+  .homepage-lightbox {
+    .lightbox-contents { width: 50%; }
+  }
 }
 
 /*** LARGE DEVICES : Desktops, 992px and up ***/
 @media (min-width: 992px){
   .home-section {
-    &.home-heroimage { margin-top: 60px; }
+    &.home-heroimage { margin-top: 60px;
+      .home-carousel {
+        .heroimage-caption  { font-size: 60px; }
+      }
+    }
     &.home-content-section {
       &.house-bg { background-size: 30%;
         .home-content-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; flex-basis: 75%; }
@@ -760,6 +784,10 @@
       }
       .footer-copyright { margin-top: 10px; text-transform: uppercase; }
     }
+  }
+
+  .homepage-lightbox {
+    .lightbox-contents { width: 35%; }
   }
 }
 

@@ -195,6 +195,17 @@ if(function_exists('register_sidebar')){
 		'before_title'	  =>	'<h3 class="green-txt">',
 		'after_title'	    =>	'</h3>'
 	));
+
+  register_sidebar(array(
+		'name'			      =>	__('Covid Disclosure', 'covid-sidebar'),
+		'description'	    =>	__('Displays message regarding COVID-19 policies', 'covid-sidebar'),
+		'id'			        =>	'covid-sidebar',
+		'class'			      =>	'covid-content',
+		'before_widget'	  =>	'<div class="covid-sidebar">',
+		'after_widget'	  =>	'</div>',
+		'before_title'	  =>	'<h3 class="green-txt">',
+		'after_title'	    =>	'</h3>'
+	));
 }
 
 if(function_exists('register_sidebar'))
