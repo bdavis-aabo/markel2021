@@ -3,15 +3,24 @@
 <?php get_header(); ?>
 
 <?php while(have_posts()): the_post(); ?>
-  <?php if(have_rows('homepage_heroimage')): ?>
+  <?php if(have_rows('homepage_heroimage')): $_s = 0; ?>
   <section class="home-section home-heroimage">
-    <?php while(have_rows('homepage_heroimage')): the_row(); $_lgImage = get_sub_field('large_image'); $_mobImage = get_sub_field('mobile_image'); ?>
-    <picture class="homepage-heroimage">
-      <source media="(max-width: 520px)" srcset="<?php echo $_mobImage['url'] ?>">
-      <img src="<?php echo $_lgImage['url'] ?>" alt="<?php echo $_lgImage['alt'] ?>" class="heroimage-img img-fluid" />
-      <h1 class="heroimage-caption">True Design</h1>
-    </picture>
-    <?php endwhile; ?>
+    <div class="carousel slide home-carousel" id="homepageCarousel" data-ride="carousel" data-interval="7500">
+      <div class="carousel-inner">
+      <?php while(have_rows('homepage_heroimage')): the_row(); $_lgImage = get_sub_field('large_image'); $_mobImage = get_sub_field('mobile_image'); ?>
+        <div class="carousel-item <?php if($_s == 0): echo 'active'; endif; ?>">
+          <picture class="homepage-heroimage">
+            <source media="(max-width: 520px)" srcset="<?php echo $_mobImage['url'] ?>">
+            <img src="<?php echo $_lgImage['url'] ?>" alt="<?php echo $_lgImage['alt'] ?>" class="heroimage-img img-fluid" />
+          </picture>
+        </div>
+      <?php $_s++; endwhile; ?>
+        <h1 class="heroimage-caption">True Design</h1>
+      </div>
+    </div>
+
+
+
 
   </section>
   <?php endif; ?>
