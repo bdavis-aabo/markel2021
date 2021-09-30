@@ -149,7 +149,8 @@ html, body {
       }
     }
   }
-  &.community-interactive { margin-bottom: 0; padding-bottom: 3.5vh; display: none;
+  &.community-interactive { margin-bottom: 0; padding-bottom: 3.5vh;
+    .nomobile { display: none; }
     .map-title { padding: 1.5vh 0; text-align: center;
       h2 { margin: 8px 0 15px; letter-spacing: 1.5px; }
     }
@@ -157,6 +158,7 @@ html, body {
       .interactive-map { margin: 2.5vh 0; }
     }
   }
+  &.community-download { padding: 2.5vh 0; }
   &.community-features {
     .community-features-container { display: flex; flex-wrap: wrap; justify-content: center;
       .carousel-inner {
@@ -273,6 +275,10 @@ html, body {
       }
       .callout-right { order: 0;
         figure { margin-bottom: 0; }
+      }
+
+      .sustain-logos { display: flex; flex-wrap: nowrap; justify-content: center; align-items: center;
+        a { display: block; flex-basis: 25%; }
       }
     }
   }
@@ -464,6 +470,8 @@ html, body {
       }
     }
     &.community-interactive { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+      .nomobile { display: block; }
+      .mobileonly { display: none; }
       .map-container { padding-bottom: 0;
         &::before { padding-top: 80%; }
       }
@@ -537,6 +545,17 @@ html, body {
     &.custom-home-locations {
       .locations-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
         .custom-location { flex-basis: 50%; }
+      }
+    }
+
+    // MARKEL DIFFERENCE
+    &.true-callouts-section {
+      .callouts-container {
+        .callout {
+          .sustain-logos { width: 60%; margin: 0 auto; display: flex; flex-wrap: nowrap; justify-content: center; align-items: center;
+            a { display: block; flex-basis: 25%; }
+          }
+        }
       }
     }
 
