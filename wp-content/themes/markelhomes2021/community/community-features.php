@@ -32,8 +32,10 @@
       </ol>
     </div>
 
+    <?php if(get_field('community_brochure') != ''): $_brochure = get_field('community_brochure'); ?>
     <div class="community-brochure-download">
-      <a href="#community_brochure" title="<?php the_title() ?> - Community Brochure" class="btn outline-btn gold-txt">Download Community Brochure</a>
+      <a href="<?php echo $_brochure['url'] ?>" target="_blank" title="<?php the_title() ?> - Community Brochure" class="btn outline-btn gold-txt">Download Community Brochure</a>
     </div>
+    <?php endif; ?>
   </section>
   <?php endif; ?>
