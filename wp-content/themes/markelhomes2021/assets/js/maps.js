@@ -29,7 +29,7 @@ var map = new mapboxgl.Map({
   center:     [-105.140, 40.075]
 });
 var nav = new mapboxgl.NavigationControl();
-map.addControl(nav, 'bottom-left');
+map.addControl(nav, 'top-left');
 map.scrollZoom.disable();
 
 map.on('load', function(){
@@ -91,4 +91,8 @@ map.on('click', function(e){
     .setLngLat(feature.geometry.coordinates)
     .setHTML(commPopupContent)
     .addTo(map);
+});
+
+$(window).resize(function(){
+  location.reload();
 });
