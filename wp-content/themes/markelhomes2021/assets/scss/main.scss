@@ -438,7 +438,7 @@ html, body {
     // COMMUNITY PARENT PAGE
     &.community-section { margin-top: 145px;
       .map-container { margin-top: 0; }
-      .community-container { display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: flex-start; border-left: 2px solid $ultgray;
+      .community-container { display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: flex-start; border-left: 5px solid $ultgray;
         .community-box { flex-basis: 50%; }
       }
     }
