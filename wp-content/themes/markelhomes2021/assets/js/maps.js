@@ -26,11 +26,12 @@ var map = new mapboxgl.Map({
   container:  'communityMap',
   style:      'mapbox://styles/bpdavis81/ckrp3kz1jdsld17orqxzahw1y',
   zoom:       zoom,
-  center:     [-105.140, 40.075]
+  center:     [-105.119, 40.0487]
 });
 var nav = new mapboxgl.NavigationControl();
-map.addControl(nav, 'top-left');
+//map.addControl(nav, 'top-left');
 map.scrollZoom.disable();
+
 
 map.on('load', function(){
   // Create Layers
@@ -83,7 +84,7 @@ map.on('click', function(e){
     '<p class="community-address">' + address + '</p>' +
     '<p class="community-info"><span class="product-txt">' + product + '</span><br/>' +
     // footage + ' Sq. Ft. <br />' + bed + ' Beds | ' + bath + ' Baths<br/ >' +
-      'Priced From ' + price + '</p>' +
+    //  'Priced From ' + price + '</p>' +
     '<p class="community-info"><a href="/communities/' + shortTitle + '" class="btn outline-btn white-btn">visit community</a></p>' +
     '</div>';
 
