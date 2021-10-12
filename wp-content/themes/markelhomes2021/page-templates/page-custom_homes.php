@@ -11,15 +11,17 @@
       <source media="(max-width: 520px)" srcset="<?php echo $_mobImage['url'] ?>">
       <img src="<?php echo $_lgImage['url'] ?>" alt="<?php echo $_lgImage['alt'] ?>" class="pagehero-img img-fluid" />
     </picture>
+
+    <?php if(is_page('realtors')): ?>
     <div class="brand-logo blue-bg">
-      <?php if(is_page('custom-homes')): ?>
-      <img src="<?php bloginfo('template_directory') ?>/assets/images/brand-logos/true-custom.svg" alt="<?php bloginfo('name') ?> - True Custom" class="img-fluid" />
-      <?php elseif(is_page('realtors')): ?>
       <img src="<?php bloginfo('template_directory') ?>/assets/images/brand-logos/true-respect.svg" alt="<?php bloginfo('name') ?> - True Respect" class="img-fluid" />
-      <?php elseif(is_page('true-style-design-suites')): ?>
-      <img src="<?php bloginfo('template_directory') ?>/assets/images/brand-logos/true-style.svg" alt="<?php bloginfo('name') ?> - True Style Design Suites" class="img-fluid" />
-      <?php endif; ?>
     </div>
+    <?php elseif(is_page('true-style-design-suites')): ?>
+    <div class="brand-logo blue-bg">
+      <img src="<?php bloginfo('template_directory') ?>/assets/images/brand-logos/true-style.svg" alt="<?php bloginfo('name') ?> - True Style Design Suites" class="img-fluid" />
+    </div>
+    <?php endif; ?>
+
   </section>
   <?php endwhile; ?>
 
@@ -30,30 +32,19 @@
     </div>
   </section>
 
-  <?php if(have_rows('custom_home_processes')): ?>
-  <section class="page-section custom-home-process blue-bg">
-    <div class="process-container">
-    <?php while(have_rows('custom_home_processes')): the_row() ?>
-      <article class="process">
-        <?php echo get_sub_field('process') ?>
-      </article>
-    <?php endwhile; ?>
-    </div>
-  </section>
-  <?php endif; ?>
-
-  <?php if(have_rows('custom_home_locations')): ?>
-  <section class="page-section custom-home-locations">
-    <div class="locations-container">
-    <?php while(have_rows('custom_home_locations')): the_row(); $_homeImage = get_sub_field('custom_home_image'); ?>
-      <article class="custom-location">
-        <figure>
-          <img src="<?php echo $_homeImage['url'] ?>" title="<?php echo $_homeImage['alt'] ?>" class="img-fluid" />
-        </figure>
-
-        <a href="<?php echo get_sub_field('custom_home_link') ?>" title="<?php echo get_sub_field('custom_homes_title') ?>" class="btn outline-btn white-btn">
-          <?php echo get_sub_field('custom_homes_title') ?>
-        </a>
+  <?php if(have_rows('home_collections')): ?>
+  <section class="page-section home-collection-section">
+    <div class="collection-container">
+    <?php while(have_rows('home_collections')): the_row(); $_homeImage = get_sub_field('collection_image'); ?>
+      <article class="home-collection">
+        <div class="collection-image">
+          <figure><img src="<?php echo $_homeImage['url'] ?>" alt="<?php echo $_homeImage['alt'] ?>" class="img-fluid"></figure>
+        </div>
+        <div class="collection-information <?php echo get_sub_field('collection_color') . '-bg' ?>">
+          <div class="collection-content">
+            <?php echo get_sub_field('collection_content') ?>
+          </div>
+        </div>
       </article>
     <?php endwhile; ?>
     </div>
