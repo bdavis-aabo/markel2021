@@ -86,7 +86,7 @@ map.on('click', function(e){
     '<p class="community-info"><span class="product-txt">' + product + '</span><br/>';
 
   if(directions){
-    commPopupContent += '<p class="community-info"><a href="' + directions + '" class="btn outline-btn white-btn" target="_blank">get directions</a></p>';
+    commPopupContent += '<p class="community-info"><a href="' + directions + '" class="btn outline-btn white-btn" target="_blank" title="Directions to ' + title + '">get directions</a></p>';
   }
 
   commPopupContent += '</div>';
