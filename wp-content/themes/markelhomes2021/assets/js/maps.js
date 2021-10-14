@@ -74,6 +74,7 @@ map.on('click', function(e){
   var bath =       feature.properties.bath;
   var price =      feature.properties.pricing;
   var image =      feature.properties.image;
+  var directions = feature.properties.directions;
 
   var commPopupContent = '<div class="community-popup popup">';
   if(image){
@@ -82,11 +83,17 @@ map.on('click', function(e){
   commPopupContent += '<div class="community-details">' +
     '<h3 class="community-name">' + title + '</h2>' +
     '<p class="community-address">' + address + '</p>' +
-    '<p class="community-info"><span class="product-txt">' + product + '</span><br/>' +
-    // footage + ' Sq. Ft. <br />' + bed + ' Beds | ' + bath + ' Baths<br/ >' +
-    //  'Priced From ' + price + '</p>' +
-    '<p class="community-info"><a href="/communities/' + shortTitle + '" class="btn outline-btn white-btn">visit community</a></p>' +
-    '</div>';
+    '<p class="community-info"><span class="product-txt">' + product + '</span><br/>';
+
+  if(directions){
+    commPopupContent += '<p class="community-info"><a href="' + directions + '" class="btn outline-btn white-btn" target="_blank">get directions</a></p>';
+  }
+
+  commPopupContent += '</div>';
+
+  // footage + ' Sq. Ft. <br />' + bed + ' Beds | ' + bath + ' Baths<br/ >' +
+  //  'Priced From ' + price + '</p>' +
+
 
   var commPopup = new mapboxgl.Popup({ offset: [0,0]})
     .setLngLat(feature.geometry.coordinates)
