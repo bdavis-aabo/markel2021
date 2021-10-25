@@ -90,7 +90,7 @@ html, body {
 
   // COMMUNITY PARENT PAGE
   &.community-section {
-    .map-container { display: block; height: 600px; margin-top: 140px; }
+    .map-container { display: block; height: 600px; }
     .community-container { flex-basis: 100%;
       .community-box { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
         .community-image { margin-bottom: 15px; }
@@ -616,6 +616,14 @@ html, body {
   .page-section {
     &.page-heroimage-section,
     &.page-heroimage { margin-top: 60px; }
+
+    &.page-heroimage-section {
+      .page-heroimage {
+        .heroimage-caption { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+          .divider { display: inline-block; padding: 0 15px; }
+        }
+      }
+    }
     // COMMUNITY DETAIL PAGE
     &.community-section { margin-top: 60px;
       .map-container,
@@ -662,9 +670,9 @@ html, body {
     &.page-heroimage { margin-top: 83px; }
 
     // COMMUNITY PARENT PAGE
-    &.community-section { flex-wrap: nowrap; overflow: hidden; align-items: stretch;
+    &.community-section { flex-wrap: nowrap; overflow: hidden; align-items: stretch; height: calc(100vh - 60px);
       .map-container { flex-basis: 40%; height: 100% !important; }
-      .community-container { flex-basis: 60%; padding-top: 20px;
+      .community-container { flex-basis: 60%; padding-top: 20px; overflow-y: scroll;
         .community-box { flex-basis: 100%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; border-bottom: 1px solid $ultgray;
           .community-image { margin-bottom: 0; flex-basis: 45%; }
           .community-details { flex-basis: 55%; padding: 0 4vw;

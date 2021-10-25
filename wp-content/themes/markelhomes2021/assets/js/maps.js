@@ -1,22 +1,30 @@
 var winW = window.innerWidth;
 var zoom;
 var icon;
+var lat;
+var lng;
 
 if(winW <= 576){
   zoom = 10.5;
   icon = .5;
+  lat = -105.119;
+  lng = 40.0635;
 } else if (winW <= 768){
   zoom = 10.5;
   icon = .5;
+  lat = -105.119;
+  lng = 40.1591;
 } else {
   zoom = 11;
   icon = .5;
+  lat = -105.119;
+  lng = 40.0635;
 }
 
-if(winW > 1200){
-  boxH = $('.community-container').innerHeight();
-  $('.map-container').css('min-height', boxH + 'px');
-}
+// if(winW > 1200){
+//   boxH = $('.community-container').innerHeight();
+//   $('.map-container').css('min-height', boxH + 'px');
+// }
 
 // mapbox scripts
 mapboxgl.accessToken = 'pk.eyJ1IjoiYnBkYXZpczgxIiwiYSI6ImNrcTQwbDR4NTByZGgycG56N3pkMDB1NGMifQ.5qgmUy3sOAsi5vEhcV3Rmg';
@@ -26,7 +34,7 @@ var map = new mapboxgl.Map({
   container:  'communityMap',
   style:      'mapbox://styles/bpdavis81/ckrp3kz1jdsld17orqxzahw1y',
   zoom:       zoom,
-  center:     [-105.119, 40.0487]
+  center:     [lat, lng]
 });
 var nav = new mapboxgl.NavigationControl();
 //map.addControl(nav, 'top-left');

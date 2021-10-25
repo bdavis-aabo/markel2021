@@ -7,7 +7,7 @@
     <picture class="page-heroimage">
       <source media="(max-width: 520px)" srcset="<?php echo $_mobImage['url'] ?>">
       <img src="<?php echo $_lgImage['url'] ?>" alt="<?php echo $_lgImage['alt'] ?>" class="pagehero-img img-fluid" />
-      <h1 class="heroimage-caption"><?php the_title() ?> <span class="divider">|</span> <?php echo get_field('location') ?></h1>
+      <h1 class="heroimage-caption"><?php the_title() ?> <span class="divider"> | </span> <?php echo get_field('location') ?></h1>
     </picture>
 
   </section>
