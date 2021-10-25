@@ -34,11 +34,14 @@
   <section class="page-section floorplan-gallery">
     <div class="gallery-container" id="<?php echo $post->post_name . '-gallery'; ?>">
       <?php echo do_shortcode($_gallery) ?>
+      <?php /*
       <span class="plus-icon fa-stack" style="vertical-align: top;">
         <i class="fal fa-circle fa-stack-2x"></i>
         <i class="fal fa-plus fa-stack-1x"></i>
       </span>
+      */ ?>
     </div>
+    <p class="small">Click the image above to see the full home plan gallery</p>
   </section>
   <?php endif; ?>
 
