@@ -25,6 +25,7 @@
     <div class="design-container">
       <?php while($_designs->have_posts()): $_designs->the_post(); ?>
       <article class="design" id="<?php $post->post_name ?>">
+        <a href="<?php the_permalink() ?>" title="<?php the_title() ?>">
         <figure class="design-image">
         <?php while(have_rows('homeplan_heroimage')): the_row();
           $_lgImage  = get_sub_field('large_image');
@@ -34,6 +35,7 @@
           <img src="<?php echo $_lgImage['url'] ?>" alt="<?php echo $_lgImage['alt'] ?>" class="design-img img-fluid" />
         <?php endwhile; ?>
         </figure>
+        </a>
         <div class="design-info">
           <?php
           if(get_field('homeplan_availability')):
