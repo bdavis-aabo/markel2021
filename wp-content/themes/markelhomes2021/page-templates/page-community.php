@@ -54,6 +54,18 @@
       </figure>
     </div>
   </section>
+  <?php elseif(get_field('community_map') == '' && get_field('community_map_image') != ''): $_mapImage = get_field('community_map_image'); ?>
+  <section class="page-section community-interactive ltgreen-bg" id="map">
+    <div class="map-title">
+      <span class="white-txt section-title">community map</span>
+      <h2 class="white-txt"><?php echo 'at '; the_title(); ?></h2>
+    </div>
+    <div class="map-container">
+      <figure>
+        <img src="<?php echo $_mapImage['url'] ?>" class="img-fluid aligncenter" alt="<?php the_title(); ?> - Community Map" />
+      </figure>
+    </div>
+  </section>
   <?php endif; ?>
 
   <?php if(get_field('community_map_file') != ''): $_mapFile = get_field('community_map_file');?>
