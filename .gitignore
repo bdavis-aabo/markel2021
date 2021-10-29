@@ -28,6 +28,7 @@ wp-trackback.php
 xmlrpc.php
 wp-config.php
 bourbon/
+.htaccess
 
 # ignore everything in the "wp-content" directory, except:
 # "mu-plugins", "plugins", "themes" directory
@@ -40,6 +41,9 @@ wp-content/plugins/hello.php
 
 # ignore specific themes
 wp-content/themes/twenty*/
+
+#ignore ga.php
+wp-content/themes/markelhomes2021/assets/_inc/ga.php
 
 
 # ignore node dependency directories
