@@ -25,6 +25,9 @@ function carouselNormalization(){
         imageHeights.push($(this).height());
       });
       imageTallest = Math.max.apply(null, imageHeights);
+
+      //console.log('tallest: ' + imageTallest);
+
       $('#community-slide .carousel-indicators').css('top', (imageTallest + 20) + 'px');
     }
     normalizeHeights();
@@ -104,7 +107,7 @@ $(document).ready(function(){
     }
   });
 
-  carouselNormalization();
+  //carouselNormalization();
 
   // Homepage Lightbox Functions
   function displayLightbox(){
