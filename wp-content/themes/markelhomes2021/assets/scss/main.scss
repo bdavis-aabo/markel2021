@@ -163,14 +163,14 @@ html, body {
     .community-features-container { display: flex; flex-wrap: wrap; justify-content: center;
       .carousel-inner {
         .carousel-item {
-          .community-feature-content { margin: 5.5vh auto 0; padding-bottom: 2vh; width: 80%; text-align: center;
+          .community-feature-content { margin: 7.5vh auto 0; padding-bottom: 2vh; width: 80%; text-align: center;
             ul { text-align: left; }
           }
         }
       }
-      .carousel-indicators { bottom: auto; top: 44%; margin-left: 5%; margin-right: 5%; font-family: 'helvetica-light';
-        li { text-indent: 0; width: auto; height: auto; text-transform: uppercase; font-size: .95em; margin-right: 0; border: none; color: $dkgray; opacity: 1;
-          padding: 0 15px; font-size: .9em;
+      .carousel-indicators { bottom: auto; top: 310px; margin-left: 0%; margin-right: 0%; font-family: 'helvetica-light';
+        li { text-indent: 0; width: auto; height: auto; text-transform: uppercase; font-size: .89em; margin-right: 0; border: none; color: $dkgray; opacity: 1;
+          padding: 0 10px;
           &::before { content: '/ '; }
           &.active { color: $gold; }
         }
@@ -493,12 +493,12 @@ html, body {
     }
     &.community-features {
       .community-features-container {
-        .carousel-indicators { top: 40%;
+        .carousel-indicators { top: 250px; font-size: 1.1em;
           li { padding: 0 20px; }
         }
         .carousel-inner {
           .carousel-item {
-            .community-feature-content {
+            .community-feature-content { margin-top: 5vh;
               ul { text-align: center; list-style-position: inside; padding-left: 0; }
             }
           }
@@ -632,7 +632,7 @@ html, body {
     }
     &.community-features {
       .community-features-container {
-        .carousel-indicators { top: 50%; }
+        .carousel-indicators { top: 290px; }
       }
     }
 
@@ -708,7 +708,7 @@ html, body {
             }
           }
         }
-        .carousel-indicators { top: 60%; }
+        .carousel-indicators { top: 470px; }
       }
     }
 
