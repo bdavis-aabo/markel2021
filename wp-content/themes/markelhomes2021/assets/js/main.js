@@ -117,15 +117,20 @@ $(document).ready(function(){
   function closeLightbox(){
     $('html body').removeClass('is-active');
     $('#homepageLightbox').removeClass('is-active');
+    Cookies.set('covid-warning', 'true', { expires: 7});
   }
 
   if(window.location.pathname === '/'){
-    setTimeout(function(){
-      displayLightbox();
-    }, 5000);
+    if(!Cookies.get('covid-warning')){
+      setTimeout(function(){
+        displayLightbox();
+      }, 5000);
+    }
   }
 
   $('.closeLightbox').click(function(){
     closeLightbox();
   });
+
+
 });

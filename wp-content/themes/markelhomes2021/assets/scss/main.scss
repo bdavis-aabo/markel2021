@@ -396,7 +396,8 @@ html, body {
   }
 }
 .up-btn { position: fixed; right: 20px; bottom: 50px; border-radius: 100%; width: 36px; height: 36px; border: 1px solid $ltgray; background: $white; color: $gold;
-  font-size: 21px; opacity: 0; transition: opacity 666ms ease-in-out;
+  font-size: 21px; opacity: 0; transition: opacity 666ms ease-in-out; text-align: center; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  .fal { margin: 0 auto; }
   &.visible { opacity: 1; }
 }
 
