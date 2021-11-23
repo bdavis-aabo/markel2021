@@ -128,6 +128,12 @@ $(document).ready(function(){
     }
   }
 
+  var hash = window.location.hash;
+  if(hash === '#contact'){
+    $('#contact-form').addClass('active');
+    $('html body').addClass('noscroll');
+  }
+
   $('.closeLightbox').click(function(){
     closeLightbox();
   });
