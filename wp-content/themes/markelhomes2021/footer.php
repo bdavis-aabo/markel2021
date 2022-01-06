@@ -64,8 +64,7 @@
   <section class="homepage-lightbox dark-bg" id="homepageLightbox">
     <div class="lightbox-contents">
       <button class="closeLightbox"><i class="fal fa-times"></i></button>
-      <img src="<?php bloginfo('template_directory') ?>/assets/images/mask-icon.png" class="aligncenter img-fluid" alt="mask icon" />
-      <?php if(is_active_sidebar('covid-sidebar')): dynamic_sidebar('covid-sidebar'); endif; ?>
+      <?php if(is_active_sidebar('homepage-popup')): dynamic_sidebar('homepage-popup'); endif; ?>
     </div>
   </section>
   <?php endif; ?>
