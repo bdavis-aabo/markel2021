@@ -60,14 +60,14 @@
   </section>
   <?php endif; ?>
 
-  <?php if(is_page('markel-homes-and-communities')): ?>
+  <?php /* if(is_page('markel-homes-and-communities')): ?>
   <section class="homepage-lightbox dark-bg" id="homepageLightbox">
     <div class="lightbox-contents">
       <button class="closeLightbox"><i class="fal fa-times"></i></button>
       <?php if(is_active_sidebar('homepage-popup')): dynamic_sidebar('homepage-popup'); endif; ?>
     </div>
   </section>
-  <?php endif; ?>
+  <?php endif; */ ?>
 
   <button class="up-btn" id="scrollTopButton"><i class="fal fa-arrow-up"></i></button>
 

@@ -120,13 +120,13 @@ $(document).ready(function(){
     Cookies.set('covid-warning', 'true', { expires: 7});
   }
 
-  if(window.location.pathname === '/'){
-    if(!Cookies.get('covid-warning')){
-      setTimeout(function(){
-        displayLightbox();
-      }, 5000);
-    }
-  }
+  // if(window.location.pathname === '/'){
+  //   if(!Cookies.get('covid-warning')){
+  //     setTimeout(function(){
+  //       displayLightbox();
+  //     }, 5000);
+  //   }
+  // }
 
   var hash = window.location.hash;
   if(hash === '#contact'){
