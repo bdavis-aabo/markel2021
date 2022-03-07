@@ -19,7 +19,7 @@
   <section class="page-section community-design" id="designs">
     <div class="design-header">
       <span class="gold-txt section-title">home designs</span>
-      <h2>Available at <?php echo $_currentPage->post_title; ?></h2>
+      <h2>at <?php echo $_currentPage->post_title; ?></h2>
     </div>
 
     <div class="design-container">

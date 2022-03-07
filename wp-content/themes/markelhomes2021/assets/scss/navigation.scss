@@ -62,7 +62,7 @@
         }
 
         &.menu-item-has-children { position: relative;
-          .sub-menu { width: 225px; background: $white; list-style: none; padding: 0;
+          .sub-menu { width: 225px; background: $white; list-style: none; padding: 0; background: transparent; 
             .menu-item {
               a { cursor: pointer;
                 &:hover { color: $red; }

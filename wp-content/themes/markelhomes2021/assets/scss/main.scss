@@ -107,7 +107,7 @@ html, body {
   &.community-link-section { display: none; }
 
   // COMMUNITY DETAIL PAGE
-  &.page-heroimage-section {
+  &.page-heroimage-section { margin-top: 145px;
     .page-heroimage { position: relative; top: 0; left: 0;
       .heroimage-caption  { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-transform: uppercase; color: $white; z-index: 1; width: 100%;
         text-align: center; margin-bottom: 0; line-height: 1.2em; text-shadow: 0 0 15px rgba($black, .5); padding: 0 10%; letter-spacing: 1.5px;
@@ -697,6 +697,9 @@ html, body {
       }
     }
     &.community-design {
+	    .design-header { text-align: center; flex-basis: 100%; flex-grow: 1;
+	      h2 { margin-top: 15px; }
+	    }
       .design-container { flex-basis: 80%; }
     }
     &.community-features {
