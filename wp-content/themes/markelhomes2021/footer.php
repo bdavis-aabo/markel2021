@@ -29,7 +29,10 @@
     <div class="contact-form-container">
       <div class="contact-form-content">
         <h1 class="white-txt">Get In Touch</h1>
-        <p>Let us know which communities you are interested in and we'll keep you updated on information and events.</p>
+        <p>
+					Let us know which communities you are interested in and we'll keep you updated on information and events.<br/>
+					If you are interested in learning more about our <strong>Marshall Fire rebuilding program</strong>, please provide your home address in the message field.
+				</p>
       </div>
       <div class="contact-form">
         <?php echo do_shortcode('[contact-form-7 id="5" title="Contact Form"]') ?>

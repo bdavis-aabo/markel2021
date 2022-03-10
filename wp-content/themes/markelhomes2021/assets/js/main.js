@@ -138,5 +138,13 @@ $(document).ready(function(){
     closeLightbox();
   });
 
+	var slideImageHeight = $('#community-slide .carousel-item.active > picture > img').height();
+	$('.community-features-container .carousel-indicators').css('top', (slideImageHeight + 15) + 'px');
+
+	$(window).resize(function(){
+		var slideImageHeight = $('#community-slide .carousel-item.active > picture > img').height();
+		$('.community-features-container .carousel-indicators').css('top', (slideImageHeight + 15) + 'px');
+	});
+
 
 });
