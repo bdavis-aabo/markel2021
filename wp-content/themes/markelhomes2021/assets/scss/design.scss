@@ -46,6 +46,9 @@ $ltgreen: #829794;
     &.community-btn {
       &:hover { color: $ltgray; }
     }
+		&.gold-btn { border-color: $gold; color: $gold;
+			&:hover { background: $gold; color: $white; }
+		}
   }
 
 }
@@ -69,3 +72,14 @@ img.alignleft, .alignleft     { display: block; float: left; margin: 0 12px 12px
 img.alignright, .alignright   { display: block; float: right; margin: 0 0 12px 12px; }
 img.aligncenter, .aligncenter { display: block; float: none; margin: 0 auto 12px; }
 img.alignnone, .alignnone     { display: block; float: none; margin: 12px 0; }
+
+.grecaptcha-badge {
+  width: 70px !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+  left: 4px !important;
+}
+
+.grecaptcha-badge:hover {
+  width: 256px !important;
+}

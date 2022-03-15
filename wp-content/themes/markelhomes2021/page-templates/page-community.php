@@ -21,6 +21,7 @@
         <li><a href="#map">community map</a></li>
         <!-- <li><a href="#qmi">quick move-in homes</a></li> -->
         <li><a href="#community">the community</a></li>
+				<li><a href="#location">location</a></li>
       </ul>
     </div>
   </section>
@@ -34,6 +35,13 @@
       <?php endif; ?>
       <span class="gold-txt section-title">overview</span>
       <?php the_content(); ?>
+
+			<?php if(get_field('community_phone') != ''): ?>
+			<p class="phone-cta">
+				Please call for an appointment<br/>
+				<a href="tel:<?php echo str_replace('-','',get_field('community_phone')) ?>" class="btn outline-btn gold-btn"><i class="fas fa-phone"></i> <?php echo get_field('community_phone') ?></a>
+			</p>
+			<?php endif; ?>
     </div>
   </section>
 
@@ -81,5 +89,7 @@
   <?php // QMI HOMES??? ?>
 
   <?php get_template_part('community/community-features') ?>
+
+	<?php get_template_part('community/community-location') ?>
 
 <?php get_footer(); ?>

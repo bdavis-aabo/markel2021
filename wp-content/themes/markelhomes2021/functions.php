@@ -39,6 +39,7 @@ function wpt_register_js(){
     wp_enqueue_script('jquery.aos.min', '//unpkg.com/aos@next/dist/aos.js', 'jquery', '', true);
     wp_enqueue_script('fontawesome.min','//kit.fontawesome.com/4a3ca8ad33.js','','',true);
     wp_enqueue_script('js-cookie.min', '//cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js', '', '', true);
+		wp_enqueue_script('mapbox.min', '//api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js', 'jquery', '', true);
     wp_enqueue_script(
       'jquery.extras.min',
       get_template_directory_uri() . '/assets/js/main.min.js',
@@ -51,8 +52,6 @@ function wpt_register_js(){
 
 function wpt_map_scripts(){
   if(is_page('communities')){
-    wp_enqueue_script('mapbox.min', '//api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js', 'jquery', '', true);
-    wp_enqueue_style('mapbox.min', '//api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css');
     wp_enqueue_script(
       'maps.min',
       get_template_directory_uri() . '/assets/js/maps.min.js',
@@ -60,18 +59,22 @@ function wpt_map_scripts(){
       filemtime(get_template_directory() . '/assets/js/maps.min.js'),
       true
     );
-    wp_enqueue_style(
-      'maps.min',
-      get_template_directory_uri() . '/assets/css/maps.min.css',
-      array(),
-      filemtime(get_template_directory() . '/assets/css/maps.min.css'),
-    );
-  }
+	}
+	if(is_page_child(10)){
+		wp_enqueue_script(
+	    'commMaps.min',
+	    get_template_directory_uri() . '/assets/js/commMaps.min.js',
+	    array(),
+	    filemtime(get_template_directory() . '/assets/js/commMaps.min.js'),
+	    true
+	  );
+	}
 }
 
 function wpt_register_css(){
   wp_enqueue_style('bootstrap.min', '//cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css');
   wp_enqueue_style('aos.min','//unpkg.com/aos@next/dist/aos.css');
+	wp_enqueue_style('mapbox.min', '//api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css');
   wp_enqueue_style(
     'main.min',
     get_template_directory_uri() . '/assets/css/main.min.css',
@@ -281,7 +284,20 @@ function change_post_order($query){
   }
 }
 
-
+function is_page_child($pid){
+	global $post;
+	$anc = get_post_ancestors($post->ID);
+	foreach($anc as $ancestor){
+		if(is_page() && $ancestor == $pid){
+			return true;
+		}
+	}
+	if(is_page() && (is_page($pid))){
+		return true;
+	} else {
+		return false;
+	}
+}
 
 
 

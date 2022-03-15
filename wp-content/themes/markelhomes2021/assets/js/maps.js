@@ -21,11 +21,6 @@ if(winW <= 576){
   lng = 40.0635;
 }
 
-// if(winW > 1200){
-//   boxH = $('.community-container').innerHeight();
-//   $('.map-container').css('min-height', boxH + 'px');
-// }
-
 // mapbox scripts
 mapboxgl.accessToken = 'pk.eyJ1IjoiYnBkYXZpczgxIiwiYSI6ImNrcTQwbDR4NTByZGgycG56N3pkMDB1NGMifQ.5qgmUy3sOAsi5vEhcV3Rmg';
 

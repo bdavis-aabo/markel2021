@@ -2,11 +2,12 @@
     <section class="footer-content-container">
       <div class="logo-container">
         <img src="<?php bloginfo('template_directory') ?>/assets/images/markel_white-house.svg" alt="<?php bloginfo('name') ?> - house logo" class="img-fluid house-logo" />
+				<p class="small">
+					<img src="<?php bloginfo('template_directory') ?>/assets/images/eho-icon.png" class="img-fluid alignleft" />
+					&copy; <?php echo date('Y') . ' '; bloginfo('name') ?>
+      	</p>
       </div>
-      <div class="footer-left">
-        <span class="footer-title">Contact Us</span>
-        <?php if(is_active_sidebar('contact-address')): dynamic_sidebar('contact-address'); endif; ?>
-      </div>
+
       <div class="footer-right">
         <span class="footer-title">FOLLOW US</span>
         <ul class="social-links">
@@ -15,10 +16,6 @@
           <li><a href="https://www.linkedin.com/company/markel-homes/" target="_blank" title="<?php bloginfo('name') ?> on Vimeo"><i class="fab fa-linkedin"></i></a></li>
           <li><a href="http://houzz.com/pro/markelhomes/markel-homes" target="_blank" title="<?php bloginfo('name') ?> on Houzz"><i class="fab fa-houzz"></i></a></li>
         </ul>
-      </div>
-      <div class="footer-copyright">
-        <p class="small">&copy; <?php echo date('Y') . ' '; bloginfo('name') ?></p>
-        <p><img src="<?php bloginfo('template_directory') ?>/assets/images/eho-icon.png" class="img-fluid aligncenter" /></p>
       </div>
     </section>
   </footer>

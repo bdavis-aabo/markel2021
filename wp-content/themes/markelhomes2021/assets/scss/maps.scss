@@ -16,7 +16,7 @@
     .mapboxgl-popup-content { background: $aqua; padding: 0; color: $white;
       .mapboxgl-popup-close-button { color: $white; font-size: 24px; text-shadow: 0 0 4px rgba($black,.5); }
 
-      .community-details { padding: 15px; text-align: center;
+      .community-details { padding: 15px; text-align: left;
         .community-name { font-size: 26px; margin-bottom: 0; }
         .community-address,
         .community-info { font-size: 14px; }
@@ -26,6 +26,8 @@
     }
   }
 }
+
+.marker { background-image: url('../images/map-pin.png'); background-size: cover; width: 30px; height: 38px; border-radius: 0; cursor: pointer; }
 
 /*** SMALL DEVICES : Landscape phones, 576px + ***/
 @media (min-width: 576px){
