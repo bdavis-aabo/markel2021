@@ -34,6 +34,10 @@
       <div class="contact-form">
         <?php echo do_shortcode('[contact-form-7 id="5" title="Contact Form"]') ?>
 
+				<?php if(is_active_sidebar('contact-address')): ?>
+				<div class="contact-information"><?php dynamic_sidebar('contact-address'); ?></div>
+				<?php endif; ?>
+
         <?php if(is_active_sidebar('contact-disclaimer')): ?>
         <div class="disclaimer"><?php dynamic_sidebar('contact-disclaimer'); ?></div>
         <?php endif; ?>
