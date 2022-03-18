@@ -46,8 +46,8 @@ $ltgreen: #829794;
     &.community-btn {
       &:hover { color: $ltgray; }
     }
-		&.gold-btn { border-color: $gold; color: $gold;
-			&:hover { background: $gold; color: $white; }
+		&.gold-btn { border-color: $gold; color: $gold; text-transform: none;
+			&:hover { background: rgba($gold, .25); color: $white; }
 		}
   }
 
