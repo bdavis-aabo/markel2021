@@ -14,7 +14,7 @@
 						Please call or email <?php echo get_sub_field('name') ?> for an appointment: <br/>
 							<a href="tel:<?php echo str_replace('-','',get_sub_field('phone')) ?>" class="btn outline-btn gold-btn"><i class="fas fa-phone"></i> <?php echo get_sub_field('phone') ?></a>
 							<a href="mailto:<?php echo get_sub_field('email') ?>" title="email sales at <?php the_title() ?>" class="btn outline-btn gold-btn">
-								<i class="fas fa-envelope"></i> <?php echo get_sub_field('email') ?></a>
+								<i class="fas fa-envelope"></i> <?php echo 'Email'; ?></a>
 
 					<?php endwhile; ?>
 				</div>
