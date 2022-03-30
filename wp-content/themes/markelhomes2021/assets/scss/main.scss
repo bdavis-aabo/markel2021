@@ -90,9 +90,9 @@ html, body {
 
   // COMMUNITY PARENT PAGE
   &.community-section {
-    .map-container { display: block; height: 600px; }
+    .map-container { display: block; height: 500px; }
     .community-container { flex-basis: 100%;
-      .community-box { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+      .community-box { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; padding-bottom: 45px;
         .community-image { margin-bottom: 15px; }
         .community-details { padding: 20px 0 0; flex-basis: 72.5%;
           .community-name { margin-bottom: 0; }
@@ -137,6 +137,7 @@ html, body {
 					.fas { padding-right: 8px; }
 				}
 			}
+			.btn { margin-bottom: 10px; }
     }
   }
   &.community-design { padding: 2.5vh 0;
@@ -215,6 +216,7 @@ html, body {
   .community-brochure-download { padding: 0 0 5vh; }
 
   // SINGLE FLOORPLAN STYLES
+	&.floorplan-heroimage { margin-top: 145px; }
   &.floorplan-description {
     .back-btn-container { text-align: left; flex-basis: 95%; padding: 10px 0 25px;
       a { text-transform: uppercase; color: $ltgray; font-size: .9em; }
@@ -560,6 +562,7 @@ html, body {
 		}
 
     // SINGLE FLOORPLAN STYLES
+		&.floorplan-heroimage { margin-top: 80px; }
     &.floorplan-description {
       .floorplan-contents { flex-basis: 85%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; text-align: center;
         .floorplan-title, h3 { flex-grow: 1; flex-basis: 100%; }
