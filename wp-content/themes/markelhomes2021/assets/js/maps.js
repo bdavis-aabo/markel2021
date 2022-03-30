@@ -103,7 +103,3 @@ map.on('click', function(e){
     .setHTML(commPopupContent)
     .addTo(map);
 });
-
-$(window).resize(function(){
-  location.reload();
-});
