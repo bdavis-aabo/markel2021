@@ -45,7 +45,7 @@
         </figure>
         </a>
         <div class="design-info">
-          <span class="red-txt">Priced From <?php echo get_field('homeplan_price') ?></span>
+          <span class="red-txt"><?php echo get_field('homeplan_price') ?></span>
           <h3 class="design-title"><?php the_title() ?></h3>
           <?php echo get_field('homeplan_details') ?>
           <a href="<?php the_permalink() ?>" title="<?php the_title() ?>" class="btn outline-btn gold-txt">View Floorplan</a>
