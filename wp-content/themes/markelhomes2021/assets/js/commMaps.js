@@ -53,7 +53,7 @@ switch(mapID){
 		break;
 }
 
-console.log(mapID + ': [' + lat + ', ' + lng + ']');
+//console.log(mapID + ': [' + lat + ', ' + lng + ']');
 
 // mapbox scripts
 mapboxgl.accessToken = 'pk.eyJ1IjoiYnBkYXZpczgxIiwiYSI6ImNrcTQwbDR4NTByZGgycG56N3pkMDB1NGMifQ.5qgmUy3sOAsi5vEhcV3Rmg';
