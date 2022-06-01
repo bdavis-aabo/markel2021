@@ -47,6 +47,10 @@ switch(mapID){
 		lng = 40.150668;
 		lat = -105.175935;
 		break;
+	case 'northstar-map':
+		lng = 40.13316;
+		lat = -105.16668;
+		break;
 }
 
 console.log(mapID + ': [' + lat + ', ' + lng + ']');
