@@ -123,19 +123,19 @@ function create_post_type(){
   ));
 
   // Quick Move-In Homes -> Available Now
-  register_post_type('qmihomes', array(
-	  'label' 				    => __('Quick Move-Ins'),
-	  'singular_label' 	  => __('Quick Move-In'),
-	  'public' 			      => true,
-	  'show_ui' 			    => true,
-	  'capability_type' 	=> 'post',
-	  'hierarchical' 		  => true,
-	  'rewrite' 			    => array('slug' => 'qmihomes'),
-	  'supports' 			    => array('title','author','excerpt','thumbnail','custom-fields','order','page-attributes'),
-	  'menu_position' 		=> 22,
-	  'menu_icon'			    => 'dashicons-admin-home',
-	  'has_archive' 		  => true,
-  ));
+  // register_post_type('qmihomes', array(
+	//   'label' 				    => __('Quick Move-Ins'),
+	//   'singular_label' 	  => __('Quick Move-In'),
+	//   'public' 			      => true,
+	//   'show_ui' 			    => true,
+	//   'capability_type' 	=> 'post',
+	//   'hierarchical' 		  => true,
+	//   'rewrite' 			    => array('slug' => 'qmihomes'),
+	//   'supports' 			    => array('title','author','excerpt','thumbnail','custom-fields','order','page-attributes'),
+	//   'menu_position' 		=> 22,
+	//   'menu_icon'			    => 'dashicons-admin-home',
+	//   'has_archive' 		  => true,
+  // ));
 
   flush_rewrite_rules();
 }
