@@ -3,9 +3,10 @@
       <div class="logo-container">
         <img src="<?php bloginfo('template_directory') ?>/assets/images/markel_white-house.svg" alt="<?php bloginfo('name') ?> - house logo" class="img-fluid house-logo" />
 				<p class="small">
-					<img src="<?php bloginfo('template_directory') ?>/assets/images/eho-icon.png" class="img-fluid alignleft" />
-					&copy; <?php echo date('Y') . ' '; bloginfo('name') ?>
+					Copyright &copy; <?php echo date('Y'); ?> Markel Homes Construction Company. All rights reserved. <br/>
+					Information provided is deemed reliable but not guaranteed. Markel Homes reserves the right to change plans, elevations, pricing and specifications without prior notice.
       	</p>
+				<img src="<?php bloginfo('template_directory') ?>/assets/images/eho-icon.png" class="img-fluid aligncenter" />
       </div>
 
       <div class="footer-right">

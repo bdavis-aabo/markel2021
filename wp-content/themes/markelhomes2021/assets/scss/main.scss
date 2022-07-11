@@ -232,10 +232,10 @@ html, body {
 								&.model-ribbon 			{ background: $aqua; }
 							}
 						}
-		        .design-info { padding: 20px 0; flex-basis: 60%;
+		        .design-info { padding: 20px 0; flex-basis: 90%; text-align: center;
 		          .red-txt { text-transform: uppercase; }
 		          .design-title { margin: 15px 0; font-size: 28px; }
-		          p { font-family: 'helvetica-light'; color: $dkgray; padding-right: 10%; }
+		          p { font-family: 'helvetica-light'; color: $dkgray; padding-right: 0%; }
 		        }
 		      }
 				}
@@ -442,7 +442,7 @@ html, body {
     div { flex-basis: 100%; text-align: center; }
     .logo-container {
       .house-logo { width: 90px; }
-			.small { width: 200px; margin: 10px auto;
+			.small { width: auto; margin: 10px auto;
 				.alignleft { width: 24px; margin-top: 3px; }
 			}
     }
@@ -950,6 +950,7 @@ html, body {
       div { flex-basis: 100%; text-align: center; }
       .logo-container {
         .house-logo { width: 65px; }
+				.small { width: 600px; margin: 10px auto; }
       }
       .footer-left { border-right: 1px solid $white; }
       .footer-left,
