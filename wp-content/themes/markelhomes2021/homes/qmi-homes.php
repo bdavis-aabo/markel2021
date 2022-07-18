@@ -24,7 +24,8 @@ $_terms = get_terms('community', 'orderby=slug&hide_empty=1');
 					array(
 						'taxonomy'	=> 'community',
 						'field'			=> 'slug',
-						'terms'			=> $_term->slug
+						'terms'			=> $_term->slug,
+						'post__not_in' => array(18)
 					)
 				)
 			);
