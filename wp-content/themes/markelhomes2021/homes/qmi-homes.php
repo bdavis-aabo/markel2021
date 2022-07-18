@@ -4,7 +4,12 @@
 -- pull homes for that community
 --- if 'homeplan_availability' == 'available' show
 */
-$_terms = get_terms('community', 'orderby=slug&hide_empty=1');
+$_terms = get_terms('community',
+	array(
+		'orderby'	=> 'slug',
+		'hide_empty' => 1,
+		'exclude' => array(16)
+	));
 ?>
 
 <section class="page-section qmi-homes-section">
@@ -24,8 +29,7 @@ $_terms = get_terms('community', 'orderby=slug&hide_empty=1');
 					array(
 						'taxonomy'	=> 'community',
 						'field'			=> 'slug',
-						'terms'			=> $_term->slug,
-						'exclude' 	=> 18
+						'terms'			=> $_term->slug
 					)
 				)
 			);
