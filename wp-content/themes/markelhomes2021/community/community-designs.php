@@ -20,7 +20,11 @@
   <section class="page-section community-design" id="designs">
     <div class="design-header">
       <span class="gold-txt section-title">home designs</span>
+			<?php if(!is_page('marshall-fire')): ?>
       <h2>at <?php echo $_currentPage->post_title; ?></h2>
+			<?php else: ?>
+			<h2>Available Home Plans</h2>
+			<?php endif; ?>
     </div>
 
     <div class="design-container">
