@@ -140,6 +140,11 @@ html, body {
 			.btn { margin-bottom: 10px; }
     }
   }
+	&.timeline-section { padding: 2.5vh 0;
+		.timeline-container {
+			h2, p { text-align: center; }
+		}
+	}
   &.community-design { padding: 2.5vh 0;
     .design-header { text-align: center;
       h2 { margin-top: 15px; }

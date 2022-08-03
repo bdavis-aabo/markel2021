@@ -51,8 +51,11 @@ switch(mapID){
 		lng = 40.13316;
 		lat = -105.16668;
 		break;
+	case 'marshall-fire-map':
+		lng = 40.0154;
+		lat = -105.220;
+		break;
 }
-
 //console.log(mapID + ': [' + lat + ', ' + lng + ']');
 
 // mapbox scripts
