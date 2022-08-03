@@ -55,7 +55,7 @@
 			<?php echo get_field('rebuilding_timeline_intro') ?>
 			<img src="<?php bloginfo('template_directory') ?>/assets/images/rebuild-timeline.png" class="img-fluid" alt="rebuild timeline" />
 			<?php echo get_field('rebuilding_financing') ?>
-			<p><a href="" target="_blank" class="btn outline-btn white-btn">Learn More</a></p>
+			<p><a href="https://markelhomes.com/2022/06/20/markel-homes-benefits-of-using-our-preferred-lender/" target="_blank" class="btn outline-btn white-btn">Learn More</a></p>
 		</div>
 	</section>
 
