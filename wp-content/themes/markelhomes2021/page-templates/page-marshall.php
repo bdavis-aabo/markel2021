@@ -35,6 +35,10 @@
       <span class="gold-txt section-title">overview</span>
       <?php the_content(); ?>
 
+			<p>
+				<a href="#contact" class="contact-btn"><strong>Sign up for our interest list</strong></a> &amp; be notified when new updates and pricing become available.
+				</p>
+
 			<?php if(have_rows('community_contact')): ?>
 			<div class="community-contact-container">
 				<?php while(have_rows('community_contact')): the_row(); ?>
