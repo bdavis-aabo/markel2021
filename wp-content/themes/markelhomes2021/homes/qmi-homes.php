@@ -7,7 +7,7 @@
 $_terms = get_terms('community',
 	array(
 		'orderby'	=> 'slug',
-		'hide_empty' => 1,
+		'hide_empty' => true,
 		'exclude' => array(18)
 	));
 ?>
