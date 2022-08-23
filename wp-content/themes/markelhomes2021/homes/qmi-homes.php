@@ -16,7 +16,6 @@ $_terms = get_terms('community',
 	<div class="homes-container">
 		<?php foreach($_terms as $_term): $_community = $_term->name; ?>
 		<div class="community-container" id="<?php echo $_term->slug ?>">
-			<h2>Available Homes at <?php echo $_community ?></h2>
 			<?php
 			$_qmiHomes = new WP_Query();
 			$_args = array(
@@ -31,11 +30,18 @@ $_terms = get_terms('community',
 						'field'			=> 'slug',
 						'terms'			=> $_term->slug
 					)
+				),
+				'meta_query'		=>	array(
+					array(
+						'key'					=>	'homeplan_availability',
+						'value'				=>	'available'
+					)
 				)
 			);
 			$_qmiHomes->query($_args);
 			?>
 			<?php if($_qmiHomes->have_posts()): ?>
+			<h2>Available Homes at <?php echo $_community ?></h2>
 			<div class="community-homes-container">
 				<?php while($_qmiHomes->have_posts()): $_qmiHomes->the_post() ?>
 					<?php if(get_field('homeplan_availability') == 'available'): ?>
