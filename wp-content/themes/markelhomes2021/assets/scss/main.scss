@@ -21,7 +21,7 @@ html, body {
   &.home-content-section { padding-bottom: 0;
     &.house-bg { background: $white url('../images/markel_house-outline.jpg') no-repeat right bottom; background-size: 50%; }
     .home-content-container { flex-basis: 75%; padding: 3vh 0; text-align: center;
-      .page-title { font-size: 2.5em; margin-bottom: 10px; padding: 0 5%; letter-spacing: 1.5px; }
+      .page-title { font-size: 2.5em; margin-bottom: 10px; padding: 0 5%; letter-spacing: 1.25px; }
       .logo-mark  { margin-bottom: 15px; }
       p { line-height: 1.65em; margin-bottom: 15px;
         strong { font-weight: normal;
@@ -66,7 +66,7 @@ html, body {
   }
   &.news-section {
     .news-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
-      .news-title { text-align: center; padding: 0 5%; }
+      .news-title { text-align: center; padding: 0 5%; letter-spacing: 1.25px; }
       .latest-post { flex-basis: 90%; margin-bottom: 25px;
         .article-title { display: block; text-transform: uppercase; font-family: 'helvetica-light'; padding-right: 5%; line-height: 1.35em; margin-bottom: 15px; }
         .gold-btn { text-transform: uppercase; color: $gold; }
@@ -110,7 +110,7 @@ html, body {
   &.page-heroimage-section { margin-top: 145px;
     .page-heroimage { position: relative; top: 0; left: 0;
       .heroimage-caption  { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-transform: uppercase; color: $white; z-index: 1; width: 100%;
-        text-align: center; margin-bottom: 0; line-height: 1.2em; text-shadow: 0 0 15px rgba($black, .5); padding: 0 10%; letter-spacing: 1.5px;
+        text-align: center; margin-bottom: 0; line-height: 1.2em; text-shadow: 0 0 15px rgba($black, .5); padding: 0 10%; letter-spacing: 1.25px;
         .divider { display: none; }
       }
     }
@@ -172,7 +172,7 @@ html, body {
   &.community-interactive { margin-bottom: 0; padding-bottom: 3.5vh;
     .nomobile { display: none; }
     .map-title { padding: 1.5vh 0; text-align: center;
-      h2 { margin: 8px 0 15px; letter-spacing: 1.5px; }
+      h2 { margin: 8px 0 15px; letter-spacing: 1.25px; }
     }
     .map-container { padding: 2.5vh 0; flex-basis: 90%;
       .interactive-map { margin: 2.5vh 0; }
@@ -307,7 +307,7 @@ html, body {
 
     .content-container { text-align: center; flex-basis: 90%;
       h2 { color: $gold; font-family: 'helvetica'; font-size: .95em; text-transform: uppercase; padding-bottom: 10px; margin-bottom: 0; }
-      h3 { letter-spacing: 1.5px; }
+      h3 { letter-spacing: 1.25px; }
       .markel-line_red { width: 65%; margin: 0 auto 25px; }
       p { font-size: .95em; }
       blockquote { font-family: 'helvetica-bold'; font-size: 1.15em; color: $dkgray;
@@ -332,7 +332,7 @@ html, body {
         }
         .collection-information { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; padding: 2.5vh 0;
           .collection-content { flex-basis: 80%; text-align: center; font-family: 'helvetica-light';
-            h2 { font-size: 2.2em; letter-spacing: 1.5px; margin: 0 0 8px; }
+            h2 { font-size: 2.2em; letter-spacing: 1.25px; margin: 0 0 8px; }
             a { padding: 0 4px; color: $white;
               &:hover { color: $gold; }
             }
@@ -381,7 +381,7 @@ html, body {
   &.news-section {
     .news-section-container { text-align: center; padding-top: 2.5vh;
       h2 { font-family: 'helvetica-light'; font-weight: normal; font-size: .95em; margin-bottom: 0; }
-      h3 { letter-spacing: 1.5px; }
+      h3 { letter-spacing: 1.25px; }
     }
   }
   &.news-article-section {
@@ -755,12 +755,21 @@ html, body {
   .home-section {
     &.home-content-section {
       &.house-bg {
-        .home-content-container { flex-basis: 45%; }
+        .home-content-container { flex-basis: 40%; padding: 7.5vh 0;
+					.page-title { font-size: 32.25px; margin-bottom: 0; }
+					.logo-mark { margin: 1.5rem 0; }
+				}
       }
     }
     &.home-tiles {
       .tile-container {
-        .tile { flex-basis: 33.333%; }
+        .tile { flex-basis: 33.333%;
+					.tile-overlay {
+						.tile-overlay-contents {
+							h2 { font-size: 30px; letter-spacing: 1.25px; }
+						}
+					}
+				}
       }
     }
     &.news-section {
@@ -792,9 +801,10 @@ html, body {
 
     // COMMUNITY DETAIL PAGE
     &.community-overview {
-      .comm-overview-container {
+      .comm-overview-container { flex-basis: 60%;
         .community-logo { width: 15%; }
         h2, p { padding: 0 10%; }
+				h2 { font-size: 32.25px; letter-spacing: 1.25px; }
       }
     }
     &.community-design {
@@ -857,7 +867,7 @@ html, body {
           }
           .collection-information { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; padding: 0;
             .collection-content { flex-basis: 70%; text-align: center; font-family: 'helvetica-light';
-              h2 { font-size: 2.1em; letter-spacing: 1.5px; margin: 0 0 8px; }
+              h2 { font-size: 2.1em; letter-spacing: 1.25px; margin: 0 0 8px; }
               a { padding: 0 4px; color: $white;
                 &:hover { color: $gold; }
               }
@@ -890,7 +900,7 @@ html, body {
             .tile-logo { width: auto; margin: 0 auto 30px;
               img { margin-bottom: 0; }
             }
-            h2 { font-size: 26px; margin: 15px 0; padding: 0 15%; }
+            h2 { font-size: 26px; letter-spacing: 1.25px; margin: 15px 0; padding: 0 10%; }
             a { color: $gold; }
             p { font-size: .95em; padding: 0 12.5%; }
           }
@@ -1003,7 +1013,7 @@ html, body {
 
     // COMMUNITY DETAILS PAGE
     &.community-design {
-      .design-container { flex-basis: 85%; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+      .design-container { flex-basis: 85%; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;
         .design { flex-basis: 49.5%;
           .design-info { flex-basis: 90%; }
         }
