@@ -54,6 +54,15 @@
   </section>
   <?php endif; ?>
 
+	<?php if(get_field('homeplan_tour') != ''): ?>
+	<section class="page-section floorplan-tour">
+		<div class="floorplan-tour-container feature-container">
+			<h2 class="gold-txt">Virtual Tour</h2>
+			<iframe src="<?php echo get_field('homeplan_tour') ?>" height="100%" width="100%" frameborder="0"></iframe>
+		</div>
+	</section>
+	<?php endif; ?>
+
   <?php if(get_field('homeplan_images') != ''):
     $_floorplanImages = get_field('homeplan_images'); $_t = 0; $_c = 0;
   ?>

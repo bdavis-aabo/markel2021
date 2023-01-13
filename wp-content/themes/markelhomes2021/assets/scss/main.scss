@@ -276,6 +276,12 @@ html, body {
       ul { margin: 10px 0; padding: 0 5%; }
     }
   }
+	&.floorplan-tour { margin: 2.5vh 0 90px;
+		.floorplan-tour-container { flex-basis: 90%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; height: 500px;
+			h2 { text-align: center; font-size: 30px; margin-bottom: 20px; }
+			iframe { flex-basis: 100%; }
+		}
+	}
   &.floorplan-images { margin: 2vh 0 3.5vh;
     .floorplan-image-container { flex-basis: 90%; display: flex; flex-wrap: wrap; justify-content: center;
       h2 { text-align: center; font-size: 30px; margin-bottom: 20px; }
@@ -632,6 +638,12 @@ html, body {
         }
       }
     }
+		&.floorplan-tour { margin: 2.5vh 0 110px;
+			.floorplan-tour-container { flex-basis: 85%; display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; height: 500px;
+				h2 { text-align: left; font-size: 30px; margin-bottom: 20px; }
+				iframe { flex-basis: 100%; }
+			}
+		}
     &.floorplan-images { margin: 2vh 0 3.5vh;
       .floorplan-image-container { flex-basis: 85%;
         h2 { text-align: left; flex-basis: 100%; }
@@ -736,6 +748,14 @@ html, body {
         .carousel-indicators { top: 290px; }
       }
     }
+
+		// FLOORPLAN STYLES
+		&.floorplan-tour { margin: 2.5vh 0 110px;
+			.floorplan-tour-container { flex-basis: 85%; display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; height: 750px;
+				h2 { text-align: left; font-size: 30px; margin-bottom: 20px; }
+				iframe { flex-basis: 100%; }
+			}
+		}
 
     // PHOTO GALLERY
     &.gallery-section { padding: 0;
