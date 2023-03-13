@@ -39,7 +39,7 @@ html, body {
           p { font-family: 'helvetica-light'; margin-bottom: 25px; }
         }
         &.community-tile { position: relative; overflow: hidden;
-          .tile-overlay { position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: rgba($black,.75); transform: translateY(100%); opacity: 0;
+          .tile-overlay { position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: rgba($black,.65);
             display: flex; flex-wrap: wrap; justify-content: center; align-items: center; transition: all 666ms ease-in-out;
             .tile-overlay-contents { text-align: center;
               h2 { margin-bottom: 0; }
@@ -715,6 +715,13 @@ html, body {
         .history-right { order: 0; flex-basis: 44%; }
       }
     }
+		&.home-tiles {
+      .tile-container {
+        .tile {
+					.tile-overlay { transform: translateY(100%); opacity: 0; }
+				}
+      }
+    }
     &.home-quote-section {
       .carousel {
         .carousel-inner { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
@@ -742,6 +749,9 @@ html, body {
     &.community-section { margin-top: 60px;
       .map-container,
       .community-container { flex-basis: 100%; }
+			.community-container {
+				.community-box { padding-bottom: 0; }
+			}
     }
     &.community-features {
       .community-features-container {
@@ -776,8 +786,9 @@ html, body {
     &.home-content-section {
       &.house-bg {
         .home-content-container { flex-basis: 40%; padding: 7.5vh 0;
-					.page-title { font-size: 32.25px; margin-bottom: 0; }
+					.page-title { font-size: 32.25px; margin-bottom: 0; flex-grow: 1; flex-basis: 100%; }
 					.logo-mark { margin: 1.5rem 0; }
+					p { flex-grow: 1; flex-basis: 100%; }
 				}
       }
     }
@@ -804,6 +815,9 @@ html, body {
   .page-section {
     &.page-heroimage-section,
     &.page-heroimage { margin-top: 83px; }
+		&.page-content-section {
+			&.qmi-content-section { padding-bottom: 2.5vh; }
+		}
 
     // COMMUNITY PARENT PAGE
     &.community-section { flex-wrap: nowrap; overflow: hidden; align-items: stretch; height: calc(100vh - 60px);

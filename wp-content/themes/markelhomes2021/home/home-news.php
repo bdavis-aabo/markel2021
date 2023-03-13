@@ -18,13 +18,15 @@
       <?php while($_latestPosts->have_posts()): $_latestPosts->the_post(); ?>
       <article class="latest-post" id="<?php echo $post->post_name . '-post' ?>">
         <?php while(have_rows('featured_image')): the_row(); $_thumb = get_sub_field('thumbnail_image'); ?>
-        <figure class="article-image">
-          <img src="<?php echo $_thumb['url'] ?>" alt="<?php the_title() ?>" class="img-fluid aligncenter" />
-        </figure>
+        <a href="<?php the_permalink() ?>" title="<?php the_title() ?>">
+					<figure class="article-image">
+          	<img src="<?php echo $_thumb['url'] ?>" alt="<?php the_title() ?>" class="img-fluid aligncenter" />
+        	</figure>
+				</a>
         <?php endwhile; ?>
         <div class="article-content">
           <span class="article-title"><?php the_title() ?></span>
-          <a href="<?php the_permalink() ?>" title="<?php the_title() ?>" class="gold-btn">Read More <i class="fal fa-chevron-right"></i></a>
+          <a href="<?php the_permalink() ?>" title="<?php the_title() ?>" class="btn outline-btn gold-txt">Read More&nbsp;&nbsp;<i class="fal fa-chevron-right"></i></a>
         </div>
       </article>
       <?php endwhile; ?>

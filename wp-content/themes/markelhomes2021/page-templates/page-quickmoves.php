@@ -14,7 +14,7 @@
 		</picture>
 	</section>
 
-	<section class="page-section page-content-section">
+	<section class="page-section page-content-section qmi-content-section">
 		<div class="content-container">
 			<?php the_content() ?>
 		</div>

@@ -25,7 +25,7 @@
       <a href="/communities/<?php echo $_location->slug ?>" title="Back to <?php $_location->name; ?>">/ Back</a>
     </div>
     <div class="floorplan-contents">
-      <h1 class="floorplan-title"><?php the_title(); ?> | <span class="price red-txt"><?php echo get_field('homeplan_price') ?></span></h2>
+      <h1 class="floorplan-title"><?php the_title(); ?><br/><span class="price red-txt"><?php echo get_field('homeplan_price') ?></span></h2>
       <?php echo get_field('homeplan_description'); ?>
     </div>
   </section>
