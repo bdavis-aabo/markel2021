@@ -30,22 +30,7 @@
     </div>
   </section>
 
-  <?php if(get_field('homeplan_gallery') != ''): $_gallery = get_field('homeplan_gallery'); ?>
-  <section class="page-section floorplan-gallery">
-    <div class="gallery-container" id="<?php echo $post->post_name . '-gallery'; ?>">
-      <?php echo do_shortcode($_gallery) ?>
-      <?php /*
-      <span class="plus-icon fa-stack" style="vertical-align: top;">
-        <i class="fal fa-circle fa-stack-2x"></i>
-        <i class="fal fa-plus fa-stack-1x"></i>
-      </span>
-      */ ?>
-    </div>
-    <p class="small">Click the image above to see the full home plan gallery</p>
-  </section>
-  <?php endif; ?>
-
-  <?php if(get_field('homeplan_features') != ''): ?>
+	<?php if(get_field('homeplan_features') != ''): ?>
   <section class="page-section floorplan-features">
     <div class="feature-container">
       <h2 class="gold-txt">Home Features</h2>
@@ -54,16 +39,7 @@
   </section>
   <?php endif; ?>
 
-	<?php if(get_field('homeplan_tour') != ''): ?>
-	<section class="page-section floorplan-tour">
-		<div class="floorplan-tour-container feature-container">
-			<h2 class="gold-txt">Virtual Tour</h2>
-			<iframe src="<?php echo get_field('homeplan_tour') ?>" height="100%" width="100%" frameborder="0"></iframe>
-		</div>
-	</section>
-	<?php endif; ?>
-
-  <?php if(get_field('homeplan_images') != ''):
+	<?php if(get_field('homeplan_images') != ''):
     $_floorplanImages = get_field('homeplan_images'); $_t = 0; $_c = 0;
   ?>
   <section class="page-section floorplan-images">
@@ -97,6 +73,25 @@
     </div>
   </section>
   <?php endif; ?>
+
+	<?php if(get_field('homeplan_tour') != ''): ?>
+	<section class="page-section floorplan-tour">
+		<div class="floorplan-tour-container feature-container">
+			<h2 class="gold-txt">Virtual Tour</h2>
+			<iframe src="<?php echo get_field('homeplan_tour') ?>" height="100%" width="100%" frameborder="0"></iframe>
+		</div>
+	</section>
+	<?php endif; ?>
+
+  <?php if(get_field('homeplan_gallery') != ''): $_gallery = get_field('homeplan_gallery'); ?>
+  <section class="page-section floorplan-gallery">
+    <div class="gallery-container" id="<?php echo $post->post_name . '-gallery'; ?>">
+			<h2 class="gold-txt">Floorplan Gallery</h2>
+      <?php echo do_shortcode($_gallery) ?>
+    </div>
+  </section>
+  <?php endif; ?>
+
 <?php endwhile; // end page loop ?>
 
 <?php //get_template_part('community/community-visit') ?>

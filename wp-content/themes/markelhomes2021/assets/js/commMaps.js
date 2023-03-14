@@ -55,6 +55,14 @@ switch(mapID){
 		lng = 40.0154;
 		lat = -105.220;
 		break;
+	case '40-north-map':
+		lng = 40.0012;
+		lat = -105.106;
+		break;
+	case 'coal-creek-map':
+		lng = 39.986;
+		lat = -105.1299;
+		break;
 }
 //console.log(mapID + ': [' + lat + ', ' + lng + ']');
 

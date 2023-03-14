@@ -1,4 +1,21 @@
 <?php /* Template Name: Page - Community Details */ ?>
+<?php
+  global $_page;
+  $_page = get_post($_page)->ID;
+  $_currentPage = get_page($_page);
+
+  $_designs = new WP_Query();
+  $_args = array(
+    'post_type'       => 'models',
+    'post_status'     => 'publish',
+    'posts_per_page'  => -1,
+    'community'       => $post->post_name,
+		'meta_key'				=> 'homeplan_availability',
+    'order'           => 'ASC',
+    'orderby'         => 'menu_order meta_value'
+  );
+  $_designs->query($_args);
+?>
 
 <?php get_header(); ?>
 
@@ -17,10 +34,9 @@
     <div class="jumplink-container">
       <ul class="jumplinks">
         <li><a href="#overview">overview</a></li>
-        <li><a href="#designs">home designs</a></li>
-        <li><a href="#map">community map</a></li>
-        <!-- <li><a href="#qmi">quick move-in homes</a></li> -->
-        <li><a href="#community">the community</a></li>
+        <?php if($_designs->have_posts()): ?><li><a href="#designs">home designs</a></li><?php endif; ?>
+        <?php if(get_field('community_map') != ''): ?><li><a href="#map">community map</a></li><?php endif; ?>
+				<?php if(have_rows('community_slider_section')): ?><li><a href="#community">the community</a></li><?php endif; ?>
 				<li><a href="#location">location</a></li>
       </ul>
     </div>

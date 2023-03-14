@@ -262,7 +262,8 @@ html, body {
     }
   }
   &.floorplan-gallery {
-    .gallery-container { flex-basis: 85%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; position: relative;
+    .gallery-container { flex-basis: 90%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; position: relative;
+			h2 { text-align: center; font-size: 30px; margin-bottom: 20px; }
       .envira-gallery-wrap { margin-bottom: 0;
         .envira-gallery-public { margin-bottom: 0; }
       }
@@ -300,8 +301,8 @@ html, body {
         }
       }
       .brochure-container { flex-basis: 100%; text-align: center; padding: 12px 0;
-        .outline-btn {
-          &:hover { color: $white; }
+        .outline-btn { background: $gold; color: $white; border-color: $gold;
+          &:hover { color: $blue; }
         }
       }
     }
@@ -624,7 +625,8 @@ html, body {
       }
     }
     &.floorplan-gallery { padding: 3.5vh 0;
-      .gallery-container { flex-basis: 95%;
+      .gallery-container { flex-basis: 85%;
+				h2 { text-align: left; font-size: 30px; margin-bottom: 0; flex-basis: 100%; }
         .envira-gallery-wrap { margin-bottom: 0;
           .envira-gallery-public { margin-bottom: 0; }
         }
@@ -633,8 +635,8 @@ html, body {
     &.floorplan-features { margin: 2.5vh 0;
       .feature-container { flex-basis: 85%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
         h2 { text-align: left; font-size: 30px; margin-bottom: 0; flex-basis: 100%; }
-        ul { margin: 10px 0; padding: 0 2%; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;
-          li { flex-basis: 49%; padding: 0 0 10px; }
+        ul { margin: 10px 0; padding: 0 5%; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;
+          li { flex-basis: 48%; padding: 0 0 10px; }
         }
       }
     }
