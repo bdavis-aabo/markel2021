@@ -18,7 +18,7 @@ if(winW <= 576){
   zoom = 10.5;
   icon = .5;
 } else {
-  zoom = 11;
+  zoom = 12.5;
   icon = .5;
 }
 
@@ -56,13 +56,12 @@ switch(mapID){
 		lat = -105.220;
 		break;
 	case '40-north-map':
-		lng = 40.0012;
-		lat = -105.106;
+		lng = 40.002184;
+		lat = -105.110889;
 		break;
 	case 'coal-creek-map':
 		lng = 39.986;
 		lat = -105.1299;
-		break;
 }
 //console.log(mapID + ': [' + lat + ', ' + lng + ']');
 
