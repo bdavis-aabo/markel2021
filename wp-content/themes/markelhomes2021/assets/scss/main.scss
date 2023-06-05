@@ -385,6 +385,7 @@ html, body {
   }
 
   // NEWS/BLOG PARENT PAGE
+	&.article-heroimage-section { margin-top: 145px; }
   &.news-section {
     .news-section-container { text-align: center; padding-top: 2.5vh;
       h2 { font-family: 'helvetica-light'; font-weight: normal; font-size: .95em; margin-bottom: 0; }
